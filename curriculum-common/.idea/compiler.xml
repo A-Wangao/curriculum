@@ -7,10 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="curriculum-client" />
-        <module name="curriculum-dto" />
-        <module name="curriculum-dao" />
         <module name="curriculum-util" />
         <module name="curriculum-module" />
+        <module name="curriculum-dto" />
+        <module name="curriculum-dao" />
       </profile>
     </annotationProcessing>
   </component>
