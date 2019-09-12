@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0303f0c3-6354-4068-9a18-64ae8d18a9bc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/curriculum-util/src/main/java/com/zb/util/MqUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/TestJiFenProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/service/RestCouponService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/service/RestGoodsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/service/RestIntegralService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/service/RestIntegralmallService.class" beforeDir="false" />
-    </list>
+    <list default="true" id="0303f0c3-6354-4068-9a18-64ae8d18a9bc" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/curriculum-client/target/" />
     <ignored path="$PROJECT_DIR$/curriculum-module/target/" />
@@ -85,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/curriculum-client/src/main/java/com/zb/client/RestIntegralmallClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="638">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
             </state>
           </provider>
         </entry>
@@ -197,88 +189,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="curriculum-common" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curriculum-common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curriculum-common" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curriculum-common" type="462c0819:PsiDirectoryNode" />
-              <item name="curriculum-client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curriculum-common" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curriculum-common" type="462c0819:PsiDirectoryNode" />
-              <item name="curriculum-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curriculum-common" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curriculum-common" type="462c0819:PsiDirectoryNode" />
-              <item name="curriculum-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curriculum-common" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curriculum-common" type="462c0819:PsiDirectoryNode" />
-              <item name="curriculum-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curriculum-common" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curriculum-common" type="462c0819:PsiDirectoryNode" />
-              <item name="curriculum-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curriculum-common" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curriculum-common" type="462c0819:PsiDirectoryNode" />
-              <item name="curriculum-client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="zb" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curriculum-common" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curriculum-common" type="462c0819:PsiDirectoryNode" />
-              <item name="curriculum-dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curriculum-common" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curriculum-common" type="462c0819:PsiDirectoryNode" />
-              <item name="curriculum-dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curriculum-common" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curriculum-common" type="462c0819:PsiDirectoryNode" />
-              <item name="curriculum-dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="curriculum-common" type="b2602c69:ProjectViewProjectNode" />
-              <item name="curriculum-common" type="462c0819:PsiDirectoryNode" />
-              <item name="curriculum-dao" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -333,7 +244,7 @@
       <workItem from="1568171825285" duration="1182000" />
       <workItem from="1568181373855" duration="2483000" />
       <workItem from="1568248446039" duration="1879000" />
-      <workItem from="1568255072154" duration="280000" />
+      <workItem from="1568255072154" duration="568000" />
     </task>
     <task id="LOCAL-00001" summary="第二次提交">
       <created>1568171898712</created>
@@ -342,11 +253,18 @@
       <option name="project" value="LOCAL" />
       <updated>1568171898712</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="第二次提交">
+      <created>1568255404949</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568255404949</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8086000" />
+    <option name="totallyTimeSpent" value="8374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
@@ -836,8 +754,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/curriculum-client/src/main/java/com/zb/client/RestIntegralmallClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="638">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
         </state>
       </provider>
     </entry>

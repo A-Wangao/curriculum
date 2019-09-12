@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a32d0d99-0464-4297-a944-9bbdc58e94bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-util/src/main/java/com/zb/util/MqUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/TestJiFenProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/service/RestCouponService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/service/RestGoodsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/service/RestIntegralService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/service/RestIntegralmallService.class" beforeDir="false" />
-    </list>
+    <list default="true" id="a32d0d99-0464-4297-a944-9bbdc58e94bb" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -188,12 +180,12 @@
       <updated>1568184862163</updated>
       <workItem from="1568184863670" duration="366000" />
       <workItem from="1568249465422" duration="623000" />
-      <workItem from="1568255102175" duration="250000" />
+      <workItem from="1568255102175" duration="538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1239000" />
+    <option name="totallyTimeSpent" value="1527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="559" y="94" width="1218" height="890" extended-state="1" />
