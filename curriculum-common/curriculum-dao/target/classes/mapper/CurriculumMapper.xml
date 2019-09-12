@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.CurriculumMapper">
+
+    <select id="getCurriculumById" resultType="com.zb.pojo.Curriculum">
+        select
+                id as id,
+                courseName as courseName,
+                courseTypes as courseTypes,
+                hierarchicalType as hierarchicalType,
+                courseintroduction as courseintroduction,
+                coursechapters as coursechapters,
+                duration as duration,
+                stuNumber as stuNumber,
+                courseNotes as courseNotes,
+                whattolearn as whattolearn,
+                money as money,
+                image as image
+        from curriculum
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getCurriculumListByMap" resultType="com.zb.pojo.Curriculum" parameterType="java.util.Map">
+        select
+                id as id,
+                courseName as courseName,
+                courseTypes as courseTypes,
+                hierarchicalType as hierarchicalType,
+                courseintroduction as courseintroduction,
+                coursechapters as coursechapters,
+                duration as duration,
+                stuNumber as stuNumber,
+                courseNotes as courseNotes,
+                whattolearn as whattolearn,
+                money as money,
+                image as image
+        from curriculum
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="courseName != null and courseName!=''">
+                    and courseName=#{courseName}
+                </if>
+                <if test="courseTypes != null and courseTypes!=''">
+                    and courseTypes=#{courseTypes}
+                </if>
+                <if test="hierarchicalType != null and hierarchicalType!=''">
+                    and hierarchicalType=#{hierarchicalType}
+                </if>
+                <if test="courseintroduction != null and courseintroduction!=''">
+                    and courseintroduction=#{courseintroduction}
+                </if>
+                <if test="coursechapters != null and coursechapters!=''">
+                    and coursechapters=#{coursechapters}
+                </if>
+                <if test="duration != null and duration!=''">
+                    and duration=#{duration}
+                </if>
+                <if test="stuNumber != null and stuNumber!=''">
+                    and stuNumber=#{stuNumber}
+                </if>
+                <if test="courseNotes != null and courseNotes!=''">
+                    and courseNotes=#{courseNotes}
+                </if>
+                <if test="whattolearn != null and whattolearn!=''">
+                    and whattolearn=#{whattolearn}
+                </if>
+                <if test="money != null and money!=''">
+                    and money=#{money}
+                </if>
+                <if test="image != null and image!=''">
+                    and image=#{image}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getCurriculumCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from curriculum
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="courseName != null and courseName!=''">
+                    and courseName=#{courseName}
+                </if>
+                <if test="courseTypes != null and courseTypes!=''">
+                    and courseTypes=#{courseTypes}
+                </if>
+                <if test="hierarchicalType != null and hierarchicalType!=''">
+                    and hierarchicalType=#{hierarchicalType}
+                </if>
+                <if test="courseintroduction != null and courseintroduction!=''">
+                    and courseintroduction=#{courseintroduction}
+                </if>
+                <if test="coursechapters != null and coursechapters!=''">
+                    and coursechapters=#{coursechapters}
+                </if>
+                <if test="duration != null and duration!=''">
+                    and duration=#{duration}
+                </if>
+                <if test="stuNumber != null and stuNumber!=''">
+                    and stuNumber=#{stuNumber}
+                </if>
+                <if test="courseNotes != null and courseNotes!=''">
+                    and courseNotes=#{courseNotes}
+                </if>
+                <if test="whattolearn != null and whattolearn!=''">
+                    and whattolearn=#{whattolearn}
+                </if>
+                <if test="money != null and money!=''">
+                    and money=#{money}
+                </if>
+                <if test="image != null and image!=''">
+                    and image=#{image}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertCurriculum" parameterType="com.zb.pojo.Curriculum">
+        insert into curriculum(
+                        courseName,
+                        courseTypes,
+                        hierarchicalType,
+                        courseintroduction,
+                        coursechapters,
+                        duration,
+                        stuNumber,
+                        courseNotes,
+                        whattolearn,
+                        money,
+                        image)
+        values(
+                     #{courseName},
+                     #{courseTypes},
+                     #{hierarchicalType},
+                     #{courseintroduction},
+                     #{coursechapters},
+                     #{duration},
+                     #{stuNumber},
+                     #{courseNotes},
+                     #{whattolearn},
+                     #{money},
+                    #{image})
+    </insert>
+
+    <update id="updateCurriculum" parameterType="com.zb.pojo.Curriculum">
+        update curriculum
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="courseName != null and courseName!=''">
+                            courseName=#{courseName},
+                        </if>
+                        <if test="courseTypes != null and courseTypes!=''">
+                            courseTypes=#{courseTypes},
+                        </if>
+                        <if test="hierarchicalType != null and hierarchicalType!=''">
+                            hierarchicalType=#{hierarchicalType},
+                        </if>
+                        <if test="courseintroduction != null and courseintroduction!=''">
+                            courseintroduction=#{courseintroduction},
+                        </if>
+                        <if test="coursechapters != null and coursechapters!=''">
+                            coursechapters=#{coursechapters},
+                        </if>
+                        <if test="duration != null and duration!=''">
+                            duration=#{duration},
+                        </if>
+                        <if test="stuNumber != null and stuNumber!=''">
+                            stuNumber=#{stuNumber},
+                        </if>
+                        <if test="courseNotes != null and courseNotes!=''">
+                            courseNotes=#{courseNotes},
+                        </if>
+                        <if test="whattolearn != null and whattolearn!=''">
+                            whattolearn=#{whattolearn},
+                        </if>
+                        <if test="money != null and money!=''">
+                            money=#{money},
+                        </if>
+                        <if test="image != null and image!=''">
+                            image=#{image}
+                        </if>
+        </trim>
+    </update>
+</mapper>

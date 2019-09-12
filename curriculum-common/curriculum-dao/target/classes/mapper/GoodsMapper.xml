@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.GoodsMapper">
+
+    <select id="getGoodsById" resultType="com.zb.pojo.Goods">
+        select
+                id as id,
+                orderId as orderId,
+                createtime as createtime,
+                curriculumId as curriculumId,
+                status as status
+        from goods
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getGoodsListByMap" resultType="com.zb.pojo.Goods" parameterType="java.util.Map">
+        select
+                id as id,
+                orderId as orderId,
+                createtime as createtime,
+                curriculumId as curriculumId,
+                status as status
+        from goods
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="orderId != null and orderId!=''">
+                    and orderId=#{orderId}
+                </if>
+                <if test="createtime != null and createtime!=''">
+                    and createtime=#{createtime}
+                </if>
+                <if test="curriculumId != null and curriculumId!=''">
+                    and curriculumId=#{curriculumId}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getGoodsCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from goods
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="orderId != null and orderId!=''">
+                    and orderId=#{orderId}
+                </if>
+                <if test="createtime != null and createtime!=''">
+                    and createtime=#{createtime}
+                </if>
+                <if test="curriculumId != null and curriculumId!=''">
+                    and curriculumId=#{curriculumId}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertGoods" parameterType="com.zb.pojo.Goods">
+        insert into goods(
+                        orderId,
+                        createtime,
+                        curriculumId,
+                        status)
+        values(
+                     #{orderId},
+                     #{createtime},
+                     #{curriculumId},
+                    #{status})
+    </insert>
+
+    <update id="updateGoods" parameterType="com.zb.pojo.Goods">
+        update goods
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="orderId != null and orderId!=''">
+                            orderId=#{orderId},
+                        </if>
+                        <if test="createtime != null and createtime!=''">
+                            createtime=#{createtime},
+                        </if>
+                        <if test="curriculumId != null and curriculumId!=''">
+                            curriculumId=#{curriculumId},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status}
+                        </if>
+        </trim>
+    </update>
+</mapper>

@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient(name = "curriculum-jifen-provider", fallback = IntegralmallClientFallBack.class)
 public interface RestIntegralmallClient {
 
-    @RequestMapping(value = "/getIntegralmallList",method = RequestMethod.GET)
+    @RequestMapping(value = "/getIntegralmallList", method = RequestMethod.GET)
     public List<Integralmall> getIntegralmallList() throws Exception;
 
     @RequestMapping(value = "/getIntegralmallById", method = RequestMethod.POST)

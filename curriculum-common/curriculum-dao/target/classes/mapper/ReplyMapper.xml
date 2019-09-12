@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.ReplyMapper">
+
+    <select id="getReplyById" resultType="com.zb.pojo.Reply">
+        select
+                id as id,
+                commentId as commentId,
+                fromuserid as fromuserid,
+                touserid as touserid,
+                replymsg as replymsg,
+                createtime as createtime
+        from reply
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getReplyListByMap" resultType="com.zb.pojo.Reply" parameterType="java.util.Map">
+        select
+                id as id,
+                commentId as commentId,
+                fromuserid as fromuserid,
+                touserid as touserid,
+                replymsg as replymsg,
+                createtime as createtime
+        from reply
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="commentId != null and commentId!=''">
+                    and commentId=#{commentId}
+                </if>
+                <if test="fromuserid != null and fromuserid!=''">
+                    and fromuserid=#{fromuserid}
+                </if>
+                <if test="touserid != null and touserid!=''">
+                    and touserid=#{touserid}
+                </if>
+                <if test="replymsg != null and replymsg!=''">
+                    and replymsg=#{replymsg}
+                </if>
+                <if test="createtime != null and createtime!=''">
+                    and createtime=#{createtime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getReplyCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from reply
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="commentId != null and commentId!=''">
+                    and commentId=#{commentId}
+                </if>
+                <if test="fromuserid != null and fromuserid!=''">
+                    and fromuserid=#{fromuserid}
+                </if>
+                <if test="touserid != null and touserid!=''">
+                    and touserid=#{touserid}
+                </if>
+                <if test="replymsg != null and replymsg!=''">
+                    and replymsg=#{replymsg}
+                </if>
+                <if test="createtime != null and createtime!=''">
+                    and createtime=#{createtime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertReply" parameterType="com.zb.pojo.Reply">
+        insert into reply(
+                        commentId,
+                        fromuserid,
+                        touserid,
+                        replymsg,
+                        createtime)
+        values(
+                     #{commentId},
+                     #{fromuserid},
+                     #{touserid},
+                     #{replymsg},
+                    #{createtime})
+    </insert>
+
+    <update id="updateReply" parameterType="com.zb.pojo.Reply">
+        update reply
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="commentId != null and commentId!=''">
+                            commentId=#{commentId},
+                        </if>
+                        <if test="fromuserid != null and fromuserid!=''">
+                            fromuserid=#{fromuserid},
+                        </if>
+                        <if test="touserid != null and touserid!=''">
+                            touserid=#{touserid},
+                        </if>
+                        <if test="replymsg != null and replymsg!=''">
+                            replymsg=#{replymsg},
+                        </if>
+                        <if test="createtime != null and createtime!=''">
+                            createtime=#{createtime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.IntegralMapper">
+
+    <select id="getIntegralById" resultType="com.zb.pojo.Integral">
+        select
+                id as id,
+                userId as userId,
+                userintegral as userintegral,
+                access as access,
+                getdate as getdate,
+                usedate as usedate
+        from integral
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getIntegralListByMap" resultType="com.zb.pojo.Integral" parameterType="java.util.Map">
+        select
+                id as id,
+                userId as userId,
+                userintegral as userintegral,
+                access as access,
+                getdate as getdate,
+                usedate as usedate
+        from integral
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="userintegral != null and userintegral!=''">
+                    and userintegral=#{userintegral}
+                </if>
+                <if test="access != null and access!=''">
+                    and access=#{access}
+                </if>
+                <if test="getdate != null and getdate!=''">
+                    and getdate=#{getdate}
+                </if>
+                <if test="usedate != null and usedate!=''">
+                    and usedate=#{usedate}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getIntegralCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from integral
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="userintegral != null and userintegral!=''">
+                    and userintegral=#{userintegral}
+                </if>
+                <if test="access != null and access!=''">
+                    and access=#{access}
+                </if>
+                <if test="getdate != null and getdate!=''">
+                    and getdate=#{getdate}
+                </if>
+                <if test="usedate != null and usedate!=''">
+                    and usedate=#{usedate}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertIntegral" parameterType="com.zb.pojo.Integral">
+        insert into integral(
+                        userId,
+                        userintegral,
+                        access,
+                        getdate,
+                        usedate)
+        values(
+                     #{userId},
+                     #{userintegral},
+                     #{access},
+                     #{getdate},
+                    #{usedate})
+    </insert>
+
+    <update id="updateIntegral" parameterType="com.zb.pojo.Integral">
+        update integral
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="userId != null and userId!=''">
+                            userId=#{userId},
+                        </if>
+                        <if test="userintegral != null and userintegral!=''">
+                            userintegral=#{userintegral},
+                        </if>
+                        <if test="access != null and access!=''">
+                            access=#{access},
+                        </if>
+                        <if test="getdate != null and getdate!=''">
+                            getdate=#{getdate},
+                        </if>
+                        <if test="usedate != null and usedate!=''">
+                            usedate=#{usedate}
+                        </if>
+        </trim>
+    </update>
+</mapper>
