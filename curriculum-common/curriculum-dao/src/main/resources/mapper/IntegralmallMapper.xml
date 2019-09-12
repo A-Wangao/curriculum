@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.IntegralmallMapper">
+
+    <select id="getIntegralmallList" resultType="com.zb.pojo.Integralmall">
+        select
+        id as id,
+        name as name,
+        money as money,
+        integral as integral,
+        term as term,
+        images as images
+        from integralmall
+    </select>
+
+    <select id="getIntegralmallById" resultType="com.zb.pojo.Integralmall">
+        select
+                id as id,
+                name as name,
+                money as money,
+                integral as integral,
+                term as term,
+                images as images
+        from integralmall
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getIntegralmallListByMap" resultType="com.zb.pojo.Integralmall" parameterType="java.util.Map">
+        select
+                id as id,
+                name as name,
+                money as money,
+                integral as integral,
+                term as term,
+                images as images
+        from integralmall
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="name != null and name!=''">
+                    and name=#{name}
+                </if>
+                <if test="money != null and money!=''">
+                    and money=#{money}
+                </if>
+                <if test="integral != null and integral!=''">
+                    and integral=#{integral}
+                </if>
+                <if test="term != null and term!=''">
+                    and term=#{term}
+                </if>
+                <if test="images != null and images!=''">
+                    and images=#{images}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getIntegralmallCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from integralmall
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="name != null and name!=''">
+                    and name=#{name}
+                </if>
+                <if test="money != null and money!=''">
+                    and money=#{money}
+                </if>
+                <if test="integral != null and integral!=''">
+                    and integral=#{integral}
+                </if>
+                <if test="term != null and term!=''">
+                    and term=#{term}
+                </if>
+                <if test="images != null and images!=''">
+                    and images=#{images}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertIntegralmall" parameterType="com.zb.pojo.Integralmall">
+        insert into integralmall(
+                        name,
+                        money,
+                        integral,
+                        term,
+                        images)
+        values(
+                     #{name},
+                     #{money},
+                     #{integral},
+                     #{term},
+                    #{images})
+    </insert>
+
+    <update id="updateIntegralmall" parameterType="com.zb.pojo.Integralmall">
+        update integralmall
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="name != null and name!=''">
+                            name=#{name},
+                        </if>
+                        <if test="money != null and money!=''">
+                            money=#{money},
+                        </if>
+                        <if test="integral != null and integral!=''">
+                            integral=#{integral},
+                        </if>
+                        <if test="term != null and term!=''">
+                            term=#{term},
+                        </if>
+                        <if test="images != null and images!=''">
+                            images=#{images}
+                        </if>
+        </trim>
+    </update>
+</mapper>

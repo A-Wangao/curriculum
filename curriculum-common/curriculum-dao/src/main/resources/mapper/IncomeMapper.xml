@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.IncomeMapper">
+
+    <select id="getIncomeById" resultType="com.zb.pojo.Income">
+        select
+                Id as Id,
+                userId as userId,
+                income as income,
+                shourutime as shourutime,
+                remarks as remarks,
+                inchannel as inchannel,
+                Intype as Intype
+        from income
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getIncomeListByMap" resultType="com.zb.pojo.Income" parameterType="java.util.Map">
+        select
+                Id as Id,
+                userId as userId,
+                income as income,
+                shourutime as shourutime,
+                remarks as remarks,
+                inchannel as inchannel,
+                Intype as Intype
+        from income
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="Id != null and Id!=''">
+                    and Id=#{Id}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="income != null and income!=''">
+                    and income=#{income}
+                </if>
+                <if test="shourutime != null and shourutime!=''">
+                    and shourutime=#{shourutime}
+                </if>
+                <if test="remarks != null and remarks!=''">
+                    and remarks=#{remarks}
+                </if>
+                <if test="inchannel != null and inchannel!=''">
+                    and inchannel=#{inchannel}
+                </if>
+                <if test="Intype != null and Intype!=''">
+                    and Intype=#{Intype}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getIncomeCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from income
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="Id != null and Id!=''">
+                    and Id=#{Id}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="income != null and income!=''">
+                    and income=#{income}
+                </if>
+                <if test="shourutime != null and shourutime!=''">
+                    and shourutime=#{shourutime}
+                </if>
+                <if test="remarks != null and remarks!=''">
+                    and remarks=#{remarks}
+                </if>
+                <if test="inchannel != null and inchannel!=''">
+                    and inchannel=#{inchannel}
+                </if>
+                <if test="Intype != null and Intype!=''">
+                    and Intype=#{Intype}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertIncome" parameterType="com.zb.pojo.Income">
+        insert into income(
+                        Id,
+                        userId,
+                        income,
+                        shourutime,
+                        remarks,
+                        inchannel,
+                        Intype)
+        values(
+                     #{Id},
+                     #{userId},
+                     #{income},
+                     #{shourutime},
+                     #{remarks},
+                     #{inchannel},
+                    #{Intype})
+    </insert>
+
+    <update id="updateIncome" parameterType="com.zb.pojo.Income">
+        update income
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="Id != null and Id!=''">
+                            Id=#{Id},
+                        </if>
+                        <if test="userId != null and userId!=''">
+                            userId=#{userId},
+                        </if>
+                        <if test="income != null and income!=''">
+                            income=#{income},
+                        </if>
+                        <if test="shourutime != null and shourutime!=''">
+                            shourutime=#{shourutime},
+                        </if>
+                        <if test="remarks != null and remarks!=''">
+                            remarks=#{remarks},
+                        </if>
+                        <if test="inchannel != null and inchannel!=''">
+                            inchannel=#{inchannel},
+                        </if>
+                        <if test="Intype != null and Intype!=''">
+                            Intype=#{Intype}
+                        </if>
+        </trim>
+    </update>
+</mapper>

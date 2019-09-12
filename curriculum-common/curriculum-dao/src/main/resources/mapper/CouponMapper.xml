@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.CouponMapper">
+
+    <select id="getCouponById" resultType="com.zb.pojo.Coupon">
+        select
+                id as id,
+                userId as userId,
+                money as money,
+                maturitytime as maturitytime,
+                state as state
+        from coupon
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getCouponListByMap" resultType="com.zb.pojo.Coupon" parameterType="java.util.Map">
+        select
+                id as id,
+                userId as userId,
+                money as money,
+                maturitytime as maturitytime,
+                state as state
+        from coupon
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="money != null and money!=''">
+                    and money=#{money}
+                </if>
+                <if test="maturitytime != null and maturitytime!=''">
+                    and maturitytime=#{maturitytime}
+                </if>
+                <if test="state != null and state!=''">
+                    and state=#{state}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getCouponCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from coupon
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="money != null and money!=''">
+                    and money=#{money}
+                </if>
+                <if test="maturitytime != null and maturitytime!=''">
+                    and maturitytime=#{maturitytime}
+                </if>
+                <if test="state != null and state!=''">
+                    and state=#{state}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertCoupon" parameterType="com.zb.pojo.Coupon">
+        insert into coupon(
+                        userId,
+                        money,
+                        maturitytime,
+                        state)
+        values(
+                     #{userId},
+                     #{money},
+                     #{maturitytime},
+                    #{state})
+    </insert>
+
+    <update id="updateCoupon" parameterType="com.zb.pojo.Coupon">
+        update coupon
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="userId != null and userId!=''">
+                            userId=#{userId},
+                        </if>
+                        <if test="money != null and money!=''">
+                            money=#{money},
+                        </if>
+                        <if test="maturitytime != null and maturitytime!=''">
+                            maturitytime=#{maturitytime},
+                        </if>
+                        <if test="state != null and state!=''">
+                            state=#{state}
+                        </if>
+        </trim>
+    </update>
+</mapper>

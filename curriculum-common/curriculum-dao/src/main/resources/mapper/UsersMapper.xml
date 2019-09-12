@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.UsersMapper">
+
+    <select id="getUsersById" resultType="com.zb.pojo.Users">
+        select
+                id as id,
+                phone as phone,
+                username as username,
+                password as password,
+                nickname as nickname,
+                headerimage as headerimage,
+                createtime as createtime,
+                position as position,
+                city as city,
+                sex as sex,
+                introduce as introduce,
+                sumstudytime as sumstudytime,
+                follow as follow,
+                peopleId as peopleId,
+                realName as realName
+        from users
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getUsersListByMap" resultType="com.zb.pojo.Users" parameterType="java.util.Map">
+        select
+                id as id,
+                phone as phone,
+                username as username,
+                password as password,
+                nickname as nickname,
+                headerimage as headerimage,
+                createtime as createtime,
+                position as position,
+                city as city,
+                sex as sex,
+                introduce as introduce,
+                sumstudytime as sumstudytime,
+                follow as follow,
+                peopleId as peopleId,
+                realName as realName
+        from users
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="phone != null and phone!=''">
+                    and phone=#{phone}
+                </if>
+                <if test="username != null and username!=''">
+                    and username=#{username}
+                </if>
+                <if test="password != null and password!=''">
+                    and password=#{password}
+                </if>
+                <if test="nickname != null and nickname!=''">
+                    and nickname=#{nickname}
+                </if>
+                <if test="headerimage != null and headerimage!=''">
+                    and headerimage=#{headerimage}
+                </if>
+                <if test="createtime != null and createtime!=''">
+                    and createtime=#{createtime}
+                </if>
+                <if test="position != null and position!=''">
+                    and position=#{position}
+                </if>
+                <if test="city != null and city!=''">
+                    and city=#{city}
+                </if>
+                <if test="sex != null and sex!=''">
+                    and sex=#{sex}
+                </if>
+                <if test="introduce != null and introduce!=''">
+                    and introduce=#{introduce}
+                </if>
+                <if test="sumstudytime != null and sumstudytime!=''">
+                    and sumstudytime=#{sumstudytime}
+                </if>
+                <if test="follow != null and follow!=''">
+                    and follow=#{follow}
+                </if>
+                <if test="peopleId != null and peopleId!=''">
+                    and peopleId=#{peopleId}
+                </if>
+                <if test="realName != null and realName!=''">
+                    and realName=#{realName}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getUsersCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from users
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="phone != null and phone!=''">
+                    and phone=#{phone}
+                </if>
+                <if test="username != null and username!=''">
+                    and username=#{username}
+                </if>
+                <if test="password != null and password!=''">
+                    and password=#{password}
+                </if>
+                <if test="nickname != null and nickname!=''">
+                    and nickname=#{nickname}
+                </if>
+                <if test="headerimage != null and headerimage!=''">
+                    and headerimage=#{headerimage}
+                </if>
+                <if test="createtime != null and createtime!=''">
+                    and createtime=#{createtime}
+                </if>
+                <if test="position != null and position!=''">
+                    and position=#{position}
+                </if>
+                <if test="city != null and city!=''">
+                    and city=#{city}
+                </if>
+                <if test="sex != null and sex!=''">
+                    and sex=#{sex}
+                </if>
+                <if test="introduce != null and introduce!=''">
+                    and introduce=#{introduce}
+                </if>
+                <if test="sumstudytime != null and sumstudytime!=''">
+                    and sumstudytime=#{sumstudytime}
+                </if>
+                <if test="follow != null and follow!=''">
+                    and follow=#{follow}
+                </if>
+                <if test="peopleId != null and peopleId!=''">
+                    and peopleId=#{peopleId}
+                </if>
+                <if test="realName != null and realName!=''">
+                    and realName=#{realName}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertUsers" parameterType="com.zb.pojo.Users">
+        insert into users(
+                        phone,
+                        username,
+                        password,
+                        nickname,
+                        headerimage,
+                        createtime,
+                        position,
+                        city,
+                        sex,
+                        introduce,
+                        sumstudytime,
+                        follow,
+                        peopleId,
+                        realName)
+        values(
+                     #{phone},
+                     #{username},
+                     #{password},
+                     #{nickname},
+                     #{headerimage},
+                     #{createtime},
+                     #{position},
+                     #{city},
+                     #{sex},
+                     #{introduce},
+                     #{sumstudytime},
+                     #{follow},
+                     #{peopleId},
+                    #{realName})
+    </insert>
+
+    <update id="updateUsers" parameterType="com.zb.pojo.Users">
+        update users
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="phone != null and phone!=''">
+                            phone=#{phone},
+                        </if>
+                        <if test="username != null and username!=''">
+                            username=#{username},
+                        </if>
+                        <if test="password != null and password!=''">
+                            password=#{password},
+                        </if>
+                        <if test="nickname != null and nickname!=''">
+                            nickname=#{nickname},
+                        </if>
+                        <if test="headerimage != null and headerimage!=''">
+                            headerimage=#{headerimage},
+                        </if>
+                        <if test="createtime != null and createtime!=''">
+                            createtime=#{createtime},
+                        </if>
+                        <if test="position != null and position!=''">
+                            position=#{position},
+                        </if>
+                        <if test="city != null and city!=''">
+                            city=#{city},
+                        </if>
+                        <if test="sex != null and sex!=''">
+                            sex=#{sex},
+                        </if>
+                        <if test="introduce != null and introduce!=''">
+                            introduce=#{introduce},
+                        </if>
+                        <if test="sumstudytime != null and sumstudytime!=''">
+                            sumstudytime=#{sumstudytime},
+                        </if>
+                        <if test="follow != null and follow!=''">
+                            follow=#{follow},
+                        </if>
+                        <if test="peopleId != null and peopleId!=''">
+                            peopleId=#{peopleId},
+                        </if>
+                        <if test="realName != null and realName!=''">
+                            realName=#{realName}
+                        </if>
+        </trim>
+    </update>
+</mapper>

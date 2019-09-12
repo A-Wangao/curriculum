@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.ClassdirectiontypeMapper">
+
+    <select id="getClassdirectiontypeById" resultType="com.zb.pojo.Classdirectiontype">
+        select
+                id as id,
+                directionName as directionName
+        from classdirectiontype
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getClassdirectiontypeListByMap" resultType="com.zb.pojo.Classdirectiontype" parameterType="java.util.Map">
+        select
+                id as id,
+                directionName as directionName
+        from classdirectiontype
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="directionName != null and directionName!=''">
+                    and directionName=#{directionName}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getClassdirectiontypeCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from classdirectiontype
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="directionName != null and directionName!=''">
+                    and directionName=#{directionName}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertClassdirectiontype" parameterType="com.zb.pojo.Classdirectiontype">
+        insert into classdirectiontype(
+                        directionName)
+        values(
+                    #{directionName})
+    </insert>
+
+    <update id="updateClassdirectiontype" parameterType="com.zb.pojo.Classdirectiontype">
+        update classdirectiontype
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="directionName != null and directionName!=''">
+                            directionName=#{directionName}
+                        </if>
+        </trim>
+    </update>
+</mapper>
