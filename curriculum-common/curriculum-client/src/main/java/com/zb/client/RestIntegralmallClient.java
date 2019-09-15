@@ -23,7 +23,7 @@ public interface RestIntegralmallClient {
     public List<Integralmall> getIntegralmallList() throws Exception;
 
     @RequestMapping(value = "/getIntegralmallById", method = RequestMethod.POST)
-    public Integralmall getIntegralmallById(@RequestParam("id") Long id) throws Exception;
+    public Integralmall getIntegralmallById(@RequestParam("Id") Long Id) throws Exception;
 
     @RequestMapping(value = "/getIntegralmallListByMap", method = RequestMethod.POST)
     public List<Integralmall> getIntegralmallListByMap(@RequestParam Map<String, Object> param) throws Exception;

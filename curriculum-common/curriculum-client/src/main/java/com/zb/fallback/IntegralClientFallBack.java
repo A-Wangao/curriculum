@@ -9,9 +9,8 @@ import java.util.Map;
 @Component
 public class IntegralClientFallBack implements RestIntegralClient {
 
-
     @Override
-    public Integral getIntegralById(Long id)throws Exception{
+    public Integral getIntegralByUserId(Long userId) throws Exception {
         return null;
     }
 

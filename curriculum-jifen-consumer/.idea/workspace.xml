@@ -2,28 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37dd37d4-6ef7-4fbd-a2c9-f743a3959c98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zb/TestJiFenConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zb/controller/IntegralmallController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zb/service/IntegralmallService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zb/service/impl/IntegralmallServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestClassdirectiontypeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestClassdirectiontypeClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestClassificationtypeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestClassificationtypeClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestCommentClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestCommentClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestCouponClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestCouponClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestCurriculumClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestCurriculumClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestExpenditureClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestExpenditureClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestGoodsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestGoodsClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestIncomeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestIncomeClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zb/service/IntegralService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zb/service/impl/IntegralServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestIntegralClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestIntegralClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestIntegralmallClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestIntegralmallClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestReplyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestReplyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestUsersClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestUsersClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/fallback/ClassdirectiontypeClientFallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/fallback/ClassdirectiontypeClientFallBack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-util/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-util/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-util/src/main/java/com/zb/util/RedisUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-util/src/main/java/com/zb/util/RedisUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zb/service/jifenservice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/fallback/IntegralClientFallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/fallback/IntegralClientFallBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/fallback/IntegralmallClientFallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/fallback/IntegralmallClientFallBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/client/RestIntegralClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/client/RestIntegralClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/client/RestIntegralmallClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/client/RestIntegralmallClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/fallback/IntegralClientFallBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/fallback/IntegralClientFallBack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/fallback/IntegralmallClientFallBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/fallback/IntegralmallClientFallBack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/curriculum-client-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/curriculum-client-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/java/com/zb/mapper/IntegralMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/java/com/zb/mapper/IntegralMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/java/com/zb/mapper/IntegralmallMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/java/com/zb/mapper/IntegralmallMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/resources/mapper/IntegralMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/resources/mapper/IntegralMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/resources/mapper/IntegralmallMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/resources/mapper/IntegralmallMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/com/zb/mapper/IntegralMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/com/zb/mapper/IntegralMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/com/zb/mapper/IntegralmallMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/com/zb/mapper/IntegralmallMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/mapper/IntegralMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/mapper/IntegralMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/mapper/IntegralmallMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/mapper/IntegralmallMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/curriculum-dao-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/curriculum-dao-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-util/target/curriculum-util-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-util/target/curriculum-util-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zb/service/IntegralmallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zb/service/IntegralmallService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zb/service/impl/IntegralmallServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zb/service/impl/IntegralmallServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zb/service/impl/IntegralmallServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zb/service/impl/IntegralmallServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/src/main/java/com/zb/service/RestIntegralService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-provider/src/main/java/com/zb/service/RestIntegralService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/src/main/java/com/zb/service/RestIntegralmallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-provider/src/main/java/com/zb/service/RestIntegralmallService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-provider/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-euerka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../my-euerka-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../my-euerka-server/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../my-euerka-server/target/classes/application.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,12 +48,65 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/controller/IntegralmallController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="308">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/impl/IntegralmallServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/IntegralService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="50" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/TestJiFenConsumer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#420#421#0" expanded="true" />
+                <element signature="e#488#489#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/IntegralmallService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,10 +115,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/impl/IntegralmallServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/impl/IntegralServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="12" column="58" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+            <state relative-caret-position="308">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/controller/IntegralmallController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,12 +155,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/zb/service/jifenservice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/zb/service/IntegralmallService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/zb/TestJiFenConsumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zb/controller/IntegralmallController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zb/service/IntegralmallService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/zb/service/impl/IntegralmallServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zb/service/IntegralService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zb/service/impl/IntegralServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -132,11 +210,11 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="283" />
-    <option name="y" value="102" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="367" />
+    <option name="y" value="81" />
     <option name="width" value="1218" />
-    <option name="height" value="890" />
+    <option name="height" value="908" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -146,6 +224,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -219,7 +298,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,6 +310,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -285,18 +369,19 @@
       <option name="presentableId" value="Default" />
       <updated>1568255314624</updated>
       <workItem from="1568255316253" duration="51000" />
-      <workItem from="1568255378915" duration="3056000" />
+      <workItem from="1568255378915" duration="3247000" />
+      <workItem from="1568523352065" duration="6904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3107000" />
+    <option name="totallyTimeSpent" value="10202000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="364" y="45" width="1220" height="890" extended-state="0" />
+    <frame x="367" y="81" width="1218" height="908" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25172412" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25474957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
@@ -305,11 +390,9 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="JRebel Executor" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3792633" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29294273" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39290586" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -322,6 +405,8 @@
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="JRebel Console" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="JRebel Executor" order="15" />
+      <window_info anchor="bottom" id="Messages" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -338,17 +423,54 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/jifenservice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/jifenservice.java" />
     <entry file="jar://D:/Java/apache-maven-3.6.1/repository/com/zb/curriculum-client/1.0-SNAPSHOT/curriculum-client-1.0-SNAPSHOT.jar!/com/zb/client/RestIntegralmallClient.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="18" column="22" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/apache-maven-3.6.1/repository/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/TestJiFenConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/controller/IntegralmallController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -362,53 +484,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/apache-maven-3.6.1/repository/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/TestJiFenConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="e#488#489#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/controller/IntegralmallController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/impl/IntegralmallServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="12" column="58" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+        <state relative-caret-position="196">
+          <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/IntegralService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/impl/IntegralServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

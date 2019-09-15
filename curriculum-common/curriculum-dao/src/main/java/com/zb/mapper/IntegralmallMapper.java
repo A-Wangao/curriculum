@@ -10,7 +10,7 @@ public interface IntegralmallMapper {
 
 	public List<Integralmall> getIntegralmallList() throws Exception;
 
-	public Integralmall getIntegralmallById(@Param(value = "id") Long id)throws Exception;
+	public Integralmall getIntegralmallById(@Param(value = "Id") Long userId)throws Exception;
 
 	public List<Integralmall>	getIntegralmallListByMap(Map<String,Object> param)throws Exception;
 

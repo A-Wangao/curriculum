@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestBody;
  */
 @FeignClient(name = "mycloud-order-provider", fallback = IntegralClientFallBack.class)
 public interface RestIntegralClient {
-    @RequestMapping(value = "/getIntegralById", method = RequestMethod.POST)
-    public Integral getIntegralById(@RequestParam("id") Long id) throws Exception;
+    @RequestMapping(value = "/getIntegralByUserId", method = RequestMethod.POST)
+    public Integral getIntegralByUserId(@RequestParam("userId") Long userId) throws Exception;
 
     @RequestMapping(value = "/getIntegralListByMap", method = RequestMethod.POST)
     public List<Integral> getIntegralListByMap(@RequestParam Map<String, Object> param) throws Exception;

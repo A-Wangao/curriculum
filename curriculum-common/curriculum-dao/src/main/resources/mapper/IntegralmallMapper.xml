@@ -25,8 +25,8 @@
                 images as images
         from integralmall
         <trim prefix="where" prefixOverrides="and | or">
-            <if test="id != null">
-                and id=#{id}
+            <if test="Id != null">
+                and Id=#{Id}
             </if>
         </trim>
     </select>

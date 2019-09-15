@@ -16,9 +16,10 @@ public class IntegralmallClientFallBack implements RestIntegralmallClient {
     }
 
     @Override
-    public Integralmall getIntegralmallById(Long id)throws Exception{
+    public Integralmall getIntegralmallById(Long Id) throws Exception {
         return null;
     }
+
 
     @Override
     public List<Integralmall>	getIntegralmallListByMap(Map<String,Object> param)throws Exception{

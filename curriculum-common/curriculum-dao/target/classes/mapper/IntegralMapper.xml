@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zb.mapper.IntegralMapper">
 
-    <select id="getIntegralById" resultType="com.zb.pojo.Integral">
+    <select id="getIntegralByUserId" resultType="com.zb.pojo.Integral">
         select
                 id as id,
                 userId as userId,
@@ -14,8 +14,8 @@
                 usedate as usedate
         from integral
         <trim prefix="where" prefixOverrides="and | or">
-            <if test="id != null">
-                and id=#{id}
+            <if test="UserId != null">
+                and UserId=#{UserId}
             </if>
         </trim>
     </select>
