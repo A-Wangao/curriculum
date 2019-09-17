@@ -6,9 +6,9 @@ import java.util.Date;
 */
 public class Integral implements Serializable {
     //主键
-    private Long id;
+    private Integer id;
     //用户
-    private Long userId;
+    private Integer userId;
     //用户积分
     private Integer userintegral;
     //获取途径(0：活动1：充钱2：正常)
@@ -17,17 +17,21 @@ public class Integral implements Serializable {
     private Date getdate;
     //使用日期
     private Date usedate;
+    //数据状态
+    private Integer status;
+    //添加时间
+    private Date createTime;
     //get set 方法
-    public void setId (Long  id){
+    public void setId (Integer  id){
         this.id=id;
     }
-    public  Long getId(){
+    public  Integer getId(){
         return this.id;
     }
-    public void setUserId (Long  userId){
+    public void setUserId (Integer  userId){
         this.userId=userId;
     }
-    public  Long getUserId(){
+    public  Integer getUserId(){
         return this.userId;
     }
     public void setUserintegral (Integer  userintegral){
@@ -53,5 +57,17 @@ public class Integral implements Serializable {
     }
     public  Date getUsedate(){
         return this.usedate;
+    }
+    public void setStatus (Integer  status){
+        this.status=status;
+    }
+    public  Integer getStatus(){
+        return this.status;
+    }
+    public void setCreateTime (Date  createTime){
+        this.createTime=createTime;
+    }
+    public  Date getCreateTime(){
+        return this.createTime;
     }
 }

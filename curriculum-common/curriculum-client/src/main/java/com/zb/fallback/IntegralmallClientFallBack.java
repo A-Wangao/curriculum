@@ -9,17 +9,15 @@ import java.util.Map;
 @Component
 public class IntegralmallClientFallBack implements RestIntegralmallClient {
 
-
     @Override
-    public List<Integralmall> getIntegralmallList() throws Exception {
-        return null;
+    public List<Integralmall> getIntegralmall()throws Exception{
+    return null;
     }
 
     @Override
-    public Integralmall getIntegralmallById(Long Id) throws Exception {
+    public Integralmall getIntegralmallById(int id)throws Exception{
         return null;
     }
-
 
     @Override
     public List<Integralmall>	getIntegralmallListByMap(Map<String,Object> param)throws Exception{

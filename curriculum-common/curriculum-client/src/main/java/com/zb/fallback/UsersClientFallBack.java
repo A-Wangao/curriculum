@@ -9,9 +9,13 @@ import java.util.Map;
 @Component
 public class UsersClientFallBack implements RestUsersClient {
 
+    @Override
+    public List<Users> getUsers()throws Exception{
+    return null;
+    }
 
     @Override
-    public Users getUsersById(Long id)throws Exception{
+    public Users getUsersById(int id)throws Exception{
         return null;
     }
 

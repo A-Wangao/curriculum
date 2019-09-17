@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ed646846-6d38-4346-be33-496510f5f816" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../curriculum-good-consumer/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum-good-consumer/src/main/java/com/zb/TestGoodConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum-good-consumer/src/main/java/com/zb/controller/GoodController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum-good-consumer/src/main/java/com/zb/service/GoodService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum-good-consumer/src/main/java/com/zb/service/impl/GoodServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum-good-consumer/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zb/TestGoodProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../curriculum-jifen-consumer/src/main/java/com/zb/controller/IntegralController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestGoodsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestGoodsClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestIntegralClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestIntegralClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestIntegralmallClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/client/RestIntegralmallClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/fallback/GoodsClientFallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/fallback/GoodsClientFallBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/fallback/IntegralClientFallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/fallback/IntegralClientFallBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/fallback/IntegralmallClientFallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/src/main/java/com/zb/fallback/IntegralmallClientFallBack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/client/RestGoodsClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/client/RestGoodsClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/client/RestIntegralClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/client/RestIntegralClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/client/RestIntegralmallClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/client/RestIntegralmallClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/fallback/GoodsClientFallBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/fallback/GoodsClientFallBack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/fallback/IntegralClientFallBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/fallback/IntegralClientFallBack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/fallback/IntegralmallClientFallBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/classes/com/zb/fallback/IntegralmallClientFallBack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/curriculum-client-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-client/target/curriculum-client-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/java/com/zb/mapper/GoodsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/java/com/zb/mapper/GoodsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/java/com/zb/mapper/IntegralMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/java/com/zb/mapper/IntegralMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/java/com/zb/mapper/IntegralmallMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/java/com/zb/mapper/IntegralmallMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/resources/mapper/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/resources/mapper/GoodsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/resources/mapper/IntegralMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/src/main/resources/mapper/IntegralMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/com/zb/mapper/GoodsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/com/zb/mapper/GoodsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/com/zb/mapper/IntegralMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/com/zb/mapper/IntegralMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/com/zb/mapper/IntegralmallMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/com/zb/mapper/IntegralmallMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/mapper/GoodsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/mapper/GoodsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/mapper/IntegralMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/classes/mapper/IntegralMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/curriculum-dao-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-common/curriculum-dao/target/curriculum-dao-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-consumer/src/main/java/com/zb/controller/IntegralmallController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-consumer/src/main/java/com/zb/controller/IntegralmallController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-consumer/src/main/java/com/zb/service/IntegralService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-consumer/src/main/java/com/zb/service/IntegralService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-consumer/src/main/java/com/zb/service/IntegralmallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-consumer/src/main/java/com/zb/service/IntegralmallService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-consumer/src/main/java/com/zb/service/impl/IntegralServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-consumer/src/main/java/com/zb/service/impl/IntegralServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-consumer/src/main/java/com/zb/service/impl/IntegralmallServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-consumer/src/main/java/com/zb/service/impl/IntegralmallServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-consumer/target/classes/com/zb/controller/IntegralmallController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-consumer/target/classes/com/zb/controller/IntegralmallController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-consumer/target/classes/com/zb/service/IntegralmallService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-consumer/target/classes/com/zb/service/IntegralmallService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-consumer/target/classes/com/zb/service/impl/IntegralmallServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-consumer/target/classes/com/zb/service/impl/IntegralmallServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/src/main/java/com/zb/service/RestCouponService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/src/main/java/com/zb/service/RestGoodsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/src/main/java/com/zb/service/RestIntegralService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-provider/src/main/java/com/zb/service/RestIntegralService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/src/main/java/com/zb/service/RestIntegralmallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-provider/src/main/java/com/zb/service/RestIntegralmallService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/service/RestIntegralService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/service/RestIntegralService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/service/RestIntegralmallService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../curriculum-jifen-provider/target/classes/com/zb/service/RestIntegralmallService.class" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/TestGoodProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/RestGoodsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+              <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zb/service/RestCouponService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zb/service/RestIntegralService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zb/service/RestIntegralmallService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zb/TestGoodProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zb/service/RestGoodsService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Java\apache-maven-3.6.1\repository" />
+        <option name="mavenHome" value="D:/Java/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\Java\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="autoDetectCompiler" value="false" />
+        <option name="createModuleGroups" value="true" />
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/../curriculum-good-consumer/curriculum-good-consumer.iml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="429" />
+    <option name="y" value="93" />
+    <option name="width" value="1438" />
+    <option name="height" value="890" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="curriculum-good-provider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="curriculum-good-provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="curriculum-good-provider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="curriculum-good-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="curriculum-good-provider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="curriculum-good-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="curriculum-good-provider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="curriculum-good-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="curriculum-good-provider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="curriculum-good-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="curriculum-good-provider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="curriculum-good-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zb" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="curriculum-good-provider" type="b2602c69:ProjectViewProjectNode" />
+              <item name="curriculum-good-provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.zb" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\curriculum-good-provider\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="TestGoodProvider" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="curriculum-good-provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zb.TestGoodProvider" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.TestGoodProvider" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ed646846-6d38-4346-be33-496510f5f816" name="Default Changelist" comment="" />
+      <created>1568617754573</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568617754573</updated>
+      <workItem from="1568617756164" duration="4123000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4123000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="429" y="93" width="1438" height="890" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="JRebel" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Designer" />
+      <window_info id="Web" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963716" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="JRebel Executor" />
+      <window_info anchor="bottom" id="JRebel Console" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3819918" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/RestCouponService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="48" column="42" selection-start-line="48" selection-start-column="42" selection-end-line="48" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/RestIntegralService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="27" column="60" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/RestIntegralmallService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/apache-maven-3.6.1/repository/com/zb/curriculum-dao/1.0-SNAPSHOT/curriculum-dao-1.0-SNAPSHOT.jar!/com/zb/mapper/GoodsMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/TestGoodProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zb/service/RestGoodsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <caret line="55" column="1" lean-forward="true" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

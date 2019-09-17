@@ -9,9 +9,13 @@ import java.util.Map;
 @Component
 public class ReplyClientFallBack implements RestReplyClient {
 
+    @Override
+    public List<Reply> getReply()throws Exception{
+    return null;
+    }
 
     @Override
-    public Reply getReplyById(Long id)throws Exception{
+    public Reply getReplyById(int id)throws Exception{
         return null;
     }
 

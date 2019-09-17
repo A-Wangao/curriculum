@@ -8,5 +8,6 @@ public interface IntegralmallService {
 
     public List<Integralmall> getIntegralmallList() throws Exception;
 
-    public Integralmall getIntegralmallByUserId(Long userId) throws  Exception;
+    public int addIntegralmall(Integralmall integralmall)throws Exception;
+
 }

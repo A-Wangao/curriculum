@@ -8,7 +8,9 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface GoodsMapper {
 
-	public Goods getGoodsById(@Param(value = "id") Long id)throws Exception;
+	public List<Goods> getGoods()throws Exception;
+
+	public Goods getGoodsById(@Param(value = "id") int id)throws Exception;
 
 	public List<Goods>	getGoodsListByMap(Map<String,Object> param)throws Exception;
 

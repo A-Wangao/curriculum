@@ -6,30 +6,34 @@ import java.util.Date;
 */
 public class Expenditure implements Serializable {
     //主键
-    private Long id;
+    private Integer id;
     //用户
-    private Long userId;
+    private Integer userId;
     //支出
     private Double expenditure;
     //支出时间
-    private Date zhichutime;
+    private Date zhichuTime;
     //备注
     private String remarks;
     //途径(钱花在什么上面了)
     private String paychannel;
     //支付方式(1:支付宝2：余额3：积分)
     private Integer method;
+    //数据状态
+    private Integer status;
+    //添加时间
+    private Date createTime;
     //get set 方法
-    public void setId (Long  id){
+    public void setId (Integer  id){
         this.id=id;
     }
-    public  Long getId(){
+    public  Integer getId(){
         return this.id;
     }
-    public void setUserId (Long  userId){
+    public void setUserId (Integer  userId){
         this.userId=userId;
     }
-    public  Long getUserId(){
+    public  Integer getUserId(){
         return this.userId;
     }
     public void setExpenditure (Double  expenditure){
@@ -38,11 +42,11 @@ public class Expenditure implements Serializable {
     public  Double getExpenditure(){
         return this.expenditure;
     }
-    public void setZhichutime (Date  zhichutime){
-        this.zhichutime=zhichutime;
+    public void setZhichuTime (Date  zhichuTime){
+        this.zhichuTime=zhichuTime;
     }
-    public  Date getZhichutime(){
-        return this.zhichutime;
+    public  Date getZhichuTime(){
+        return this.zhichuTime;
     }
     public void setRemarks (String  remarks){
         this.remarks=remarks;
@@ -61,5 +65,17 @@ public class Expenditure implements Serializable {
     }
     public  Integer getMethod(){
         return this.method;
+    }
+    public void setStatus (Integer  status){
+        this.status=status;
+    }
+    public  Integer getStatus(){
+        return this.status;
+    }
+    public void setCreateTime (Date  createTime){
+        this.createTime=createTime;
+    }
+    public  Date getCreateTime(){
+        return this.createTime;
     }
 }

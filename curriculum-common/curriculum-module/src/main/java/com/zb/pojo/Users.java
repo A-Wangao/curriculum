@@ -6,7 +6,7 @@ import java.util.Date;
 */
 public class Users implements Serializable {
     //主键
-    private Long id;
+    private Integer id;
     //手机号
     private String phone;
     //登录名
@@ -35,11 +35,13 @@ public class Users implements Serializable {
     private String peopleId;
     //真实姓名
     private String realName;
+    //数据状态
+    private Integer status;
     //get set 方法
-    public void setId (Long  id){
+    public void setId (Integer  id){
         this.id=id;
     }
-    public  Long getId(){
+    public  Integer getId(){
         return this.id;
     }
     public void setPhone (String  phone){
@@ -125,5 +127,11 @@ public class Users implements Serializable {
     }
     public  String getRealName(){
         return this.realName;
+    }
+    public void setStatus (Integer  status){
+        this.status=status;
+    }
+    public  Integer getStatus(){
+        return this.status;
     }
 }

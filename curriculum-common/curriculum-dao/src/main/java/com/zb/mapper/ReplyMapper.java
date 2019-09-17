@@ -8,7 +8,9 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface ReplyMapper {
 
-	public Reply getReplyById(@Param(value = "id") Long id)throws Exception;
+	public List<Reply> getReply()throws Exception;
+
+	public Reply getReplyById(@Param(value = "id") int id)throws Exception;
 
 	public List<Reply>	getReplyListByMap(Map<String,Object> param)throws Exception;
 

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.UserroleMapper">
+
+    <select id="getUserrole" resultType="com.zb.pojo.Userrole">
+        select
+                id as id,
+                roleId as roleId
+        from userrole
+    </select>
+
+    <select id="getUserroleById" resultType="com.zb.pojo.Userrole">
+        select
+                id as id,
+                roleId as roleId
+        from userrole
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getUserroleListByMap" resultType="com.zb.pojo.Userrole" parameterType="java.util.Map">
+        select
+                id as id,
+                roleId as roleId
+        from userrole
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="roleId != null and roleId!=''">
+                    and roleId=#{roleId}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getUserroleCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from userrole
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="roleId != null and roleId!=''">
+                    and roleId=#{roleId}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertUserrole" parameterType="com.zb.pojo.Userrole">
+        insert into userrole(
+                        roleId)
+        values(
+                    #{roleId})
+    </insert>
+
+    <update id="updateUserrole" parameterType="com.zb.pojo.Userrole">
+        update userrole
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="roleId != null and roleId!=''">
+                            roleId=#{roleId}
+                        </if>
+        </trim>
+    </update>
+</mapper>

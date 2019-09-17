@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.RoleMapper">
+
+    <select id="getRole" resultType="com.zb.pojo.Role">
+        select
+                id as id,
+                roleName as roleName,
+                defaultFlag as defaultFlag,
+                deleteFlag as deleteFlag,
+                status as status,
+                createTime as createTime
+        from role
+    </select>
+
+    <select id="getRoleById" resultType="com.zb.pojo.Role">
+        select
+                id as id,
+                roleName as roleName,
+                defaultFlag as defaultFlag,
+                deleteFlag as deleteFlag,
+                status as status,
+                createTime as createTime
+        from role
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getRoleListByMap" resultType="com.zb.pojo.Role" parameterType="java.util.Map">
+        select
+                id as id,
+                roleName as roleName,
+                defaultFlag as defaultFlag,
+                deleteFlag as deleteFlag,
+                status as status,
+                createTime as createTime
+        from role
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="roleName != null and roleName!=''">
+                    and roleName=#{roleName}
+                </if>
+                <if test="defaultFlag != null and defaultFlag!=''">
+                    and defaultFlag=#{defaultFlag}
+                </if>
+                <if test="deleteFlag != null and deleteFlag!=''">
+                    and deleteFlag=#{deleteFlag}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getRoleCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from role
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="roleName != null and roleName!=''">
+                    and roleName=#{roleName}
+                </if>
+                <if test="defaultFlag != null and defaultFlag!=''">
+                    and defaultFlag=#{defaultFlag}
+                </if>
+                <if test="deleteFlag != null and deleteFlag!=''">
+                    and deleteFlag=#{deleteFlag}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertRole" parameterType="com.zb.pojo.Role">
+        insert into role(
+                        roleName,
+                        defaultFlag,
+                        deleteFlag,
+                        status,
+                        createTime)
+        values(
+                     #{roleName},
+                     #{defaultFlag},
+                     #{deleteFlag},
+                     #{status},
+                    #{createTime})
+    </insert>
+
+    <update id="updateRole" parameterType="com.zb.pojo.Role">
+        update role
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="roleName != null and roleName!=''">
+                            roleName=#{roleName},
+                        </if>
+                        <if test="defaultFlag != null and defaultFlag!=''">
+                            defaultFlag=#{defaultFlag},
+                        </if>
+                        <if test="deleteFlag != null and deleteFlag!=''">
+                            deleteFlag=#{deleteFlag},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status},
+                        </if>
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

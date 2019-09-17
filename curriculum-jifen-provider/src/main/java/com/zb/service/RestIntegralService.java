@@ -26,8 +26,8 @@ public class RestIntegralService {
     private IntegralMapper integralMapper;
 
     @RequestMapping(value = "/getIntegralById", method = RequestMethod.POST)
-    public Integral getIntegralById(@RequestParam("userId") Long userId) throws Exception {
-        return integralMapper.getIntegralByUserId(userId);
+    public Integral getIntegralById(@RequestParam("id") int id) throws Exception {
+        return integralMapper.getIntegralById(id);
     }
 
     @RequestMapping(value = "/getIntegralListByMap", method = RequestMethod.POST)

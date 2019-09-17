@@ -9,9 +9,13 @@ import java.util.Map;
 @Component
 public class IncomeClientFallBack implements RestIncomeClient {
 
+    @Override
+    public List<Income> getIncome()throws Exception{
+    return null;
+    }
 
     @Override
-    public Income getIncomeById(Long id)throws Exception{
+    public Income getIncomeById(int id)throws Exception{
         return null;
     }
 

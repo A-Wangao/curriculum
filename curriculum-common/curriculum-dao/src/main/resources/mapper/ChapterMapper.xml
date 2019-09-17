@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.ChapterMapper">
+
+    <select id="getChapter" resultType="com.zb.pojo.Chapter">
+        select
+                id as id,
+                curriculumId as curriculumId,
+                chapterName as chapterName,
+                introduce as introduce,
+                status as status,
+                createTime as createTime
+        from chapter
+    </select>
+
+    <select id="getChapterById" resultType="com.zb.pojo.Chapter">
+        select
+                id as id,
+                curriculumId as curriculumId,
+                chapterName as chapterName,
+                introduce as introduce,
+                status as status,
+                createTime as createTime
+        from chapter
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getChapterListByMap" resultType="com.zb.pojo.Chapter" parameterType="java.util.Map">
+        select
+                id as id,
+                curriculumId as curriculumId,
+                chapterName as chapterName,
+                introduce as introduce,
+                status as status,
+                createTime as createTime
+        from chapter
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="curriculumId != null and curriculumId!=''">
+                    and curriculumId=#{curriculumId}
+                </if>
+                <if test="chapterName != null and chapterName!=''">
+                    and chapterName=#{chapterName}
+                </if>
+                <if test="introduce != null and introduce!=''">
+                    and introduce=#{introduce}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getChapterCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from chapter
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="curriculumId != null and curriculumId!=''">
+                    and curriculumId=#{curriculumId}
+                </if>
+                <if test="chapterName != null and chapterName!=''">
+                    and chapterName=#{chapterName}
+                </if>
+                <if test="introduce != null and introduce!=''">
+                    and introduce=#{introduce}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertChapter" parameterType="com.zb.pojo.Chapter">
+        insert into chapter(
+                        curriculumId,
+                        chapterName,
+                        introduce,
+                        status,
+                        createTime)
+        values(
+                     #{curriculumId},
+                     #{chapterName},
+                     #{introduce},
+                     #{status},
+                    #{createTime})
+    </insert>
+
+    <update id="updateChapter" parameterType="com.zb.pojo.Chapter">
+        update chapter
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="curriculumId != null and curriculumId!=''">
+                            curriculumId=#{curriculumId},
+                        </if>
+                        <if test="chapterName != null and chapterName!=''">
+                            chapterName=#{chapterName},
+                        </if>
+                        <if test="introduce != null and introduce!=''">
+                            introduce=#{introduce},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status},
+                        </if>
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

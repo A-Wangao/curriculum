@@ -9,9 +9,13 @@ import java.util.Map;
 @Component
 public class ExpenditureClientFallBack implements RestExpenditureClient {
 
+    @Override
+    public List<Expenditure> getExpenditure()throws Exception{
+    return null;
+    }
 
     @Override
-    public Expenditure getExpenditureById(Long id)throws Exception{
+    public Expenditure getExpenditureById(int id)throws Exception{
         return null;
     }
 

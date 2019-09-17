@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.UsercurriculumMapper">
+
+    <select id="getUsercurriculum" resultType="com.zb.pojo.Usercurriculum">
+        select
+                id as id,
+                userId as userId,
+                curriculum as curriculum,
+                startTime as startTime,
+                scheduled as scheduled,
+                userTime as userTime,
+                learn as learn,
+                note as note,
+                code as code,
+                question as question,
+                status as status,
+                createTime as createTime,
+                collection as collection
+        from usercurriculum
+    </select>
+
+    <select id="getUsercurriculumById" resultType="com.zb.pojo.Usercurriculum">
+        select
+                id as id,
+                userId as userId,
+                curriculum as curriculum,
+                startTime as startTime,
+                scheduled as scheduled,
+                userTime as userTime,
+                learn as learn,
+                note as note,
+                code as code,
+                question as question,
+                status as status,
+                createTime as createTime,
+                collection as collection
+        from usercurriculum
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getUsercurriculumListByMap" resultType="com.zb.pojo.Usercurriculum" parameterType="java.util.Map">
+        select
+                id as id,
+                userId as userId,
+                curriculum as curriculum,
+                startTime as startTime,
+                scheduled as scheduled,
+                userTime as userTime,
+                learn as learn,
+                note as note,
+                code as code,
+                question as question,
+                status as status,
+                createTime as createTime,
+                collection as collection
+        from usercurriculum
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="curriculum != null and curriculum!=''">
+                    and curriculum=#{curriculum}
+                </if>
+                <if test="startTime != null and startTime!=''">
+                    and startTime=#{startTime}
+                </if>
+                <if test="scheduled != null and scheduled!=''">
+                    and scheduled=#{scheduled}
+                </if>
+                <if test="userTime != null and userTime!=''">
+                    and userTime=#{userTime}
+                </if>
+                <if test="learn != null and learn!=''">
+                    and learn=#{learn}
+                </if>
+                <if test="note != null and note!=''">
+                    and note=#{note}
+                </if>
+                <if test="code != null and code!=''">
+                    and code=#{code}
+                </if>
+                <if test="question != null and question!=''">
+                    and question=#{question}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+                <if test="collection != null and collection!=''">
+                    and collection=#{collection}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getUsercurriculumCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from usercurriculum
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="curriculum != null and curriculum!=''">
+                    and curriculum=#{curriculum}
+                </if>
+                <if test="startTime != null and startTime!=''">
+                    and startTime=#{startTime}
+                </if>
+                <if test="scheduled != null and scheduled!=''">
+                    and scheduled=#{scheduled}
+                </if>
+                <if test="userTime != null and userTime!=''">
+                    and userTime=#{userTime}
+                </if>
+                <if test="learn != null and learn!=''">
+                    and learn=#{learn}
+                </if>
+                <if test="note != null and note!=''">
+                    and note=#{note}
+                </if>
+                <if test="code != null and code!=''">
+                    and code=#{code}
+                </if>
+                <if test="question != null and question!=''">
+                    and question=#{question}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+                <if test="collection != null and collection!=''">
+                    and collection=#{collection}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertUsercurriculum" parameterType="com.zb.pojo.Usercurriculum">
+        insert into usercurriculum(
+                        userId,
+                        curriculum,
+                        startTime,
+                        scheduled,
+                        userTime,
+                        learn,
+                        note,
+                        code,
+                        question,
+                        status,
+                        createTime,
+                        collection)
+        values(
+                     #{userId},
+                     #{curriculum},
+                     #{startTime},
+                     #{scheduled},
+                     #{userTime},
+                     #{learn},
+                     #{note},
+                     #{code},
+                     #{question},
+                     #{status},
+                     #{createTime},
+                    #{collection})
+    </insert>
+
+    <update id="updateUsercurriculum" parameterType="com.zb.pojo.Usercurriculum">
+        update usercurriculum
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="userId != null and userId!=''">
+                            userId=#{userId},
+                        </if>
+                        <if test="curriculum != null and curriculum!=''">
+                            curriculum=#{curriculum},
+                        </if>
+                        <if test="startTime != null and startTime!=''">
+                            startTime=#{startTime},
+                        </if>
+                        <if test="scheduled != null and scheduled!=''">
+                            scheduled=#{scheduled},
+                        </if>
+                        <if test="userTime != null and userTime!=''">
+                            userTime=#{userTime},
+                        </if>
+                        <if test="learn != null and learn!=''">
+                            learn=#{learn},
+                        </if>
+                        <if test="note != null and note!=''">
+                            note=#{note},
+                        </if>
+                        <if test="code != null and code!=''">
+                            code=#{code},
+                        </if>
+                        <if test="question != null and question!=''">
+                            question=#{question},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status},
+                        </if>
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime},
+                        </if>
+                        <if test="collection != null and collection!=''">
+                            collection=#{collection}
+                        </if>
+        </trim>
+    </update>
+</mapper>

@@ -6,9 +6,9 @@ import java.util.Date;
 */
 public class Income implements Serializable {
     //主键
-    private Long Id;
+    private Integer Id;
     //用户
-    private Long userId;
+    private Integer userId;
     //收入
     private Double income;
     //收入时间
@@ -19,17 +19,21 @@ public class Income implements Serializable {
     private String inchannel;
     //充值类型(1获取的积分2充值的余额)
     private Integer Intype;
+    //数据状态
+    private Integer status;
+    //添加时间
+    private Date createTime;
     //get set 方法
-    public void setId (Long  Id){
+    public void setId (Integer  Id){
         this.Id=Id;
     }
-    public  Long getId(){
+    public  Integer getId(){
         return this.Id;
     }
-    public void setUserId (Long  userId){
+    public void setUserId (Integer  userId){
         this.userId=userId;
     }
-    public  Long getUserId(){
+    public  Integer getUserId(){
         return this.userId;
     }
     public void setIncome (Double  income){
@@ -61,5 +65,17 @@ public class Income implements Serializable {
     }
     public  Integer getIntype(){
         return this.Intype;
+    }
+    public void setStatus (Integer  status){
+        this.status=status;
+    }
+    public  Integer getStatus(){
+        return this.status;
+    }
+    public void setCreateTime (Date  createTime){
+        this.createTime=createTime;
+    }
+    public  Date getCreateTime(){
+        return this.createTime;
     }
 }

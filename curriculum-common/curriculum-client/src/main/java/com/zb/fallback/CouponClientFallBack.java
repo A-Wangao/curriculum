@@ -9,9 +9,13 @@ import java.util.Map;
 @Component
 public class CouponClientFallBack implements RestCouponClient {
 
+    @Override
+    public List<Coupon> getCoupon()throws Exception{
+    return null;
+    }
 
     @Override
-    public Coupon getCouponById(Long id)throws Exception{
+    public Coupon getCouponById(int id)throws Exception{
         return null;
     }
 

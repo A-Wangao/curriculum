@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: curriculum-good-consumer
+  redis:
+    database: 1
+    port: 6379
+    host: 127.0.0.1
+    password: 123456
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:ok@192.168.199.109:7001/eureka/
+server:
+  port: 8011

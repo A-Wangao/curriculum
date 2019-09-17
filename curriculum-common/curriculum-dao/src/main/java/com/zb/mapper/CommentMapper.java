@@ -8,7 +8,9 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface CommentMapper {
 
-	public Comment getCommentById(@Param(value = "id") Long id)throws Exception;
+	public List<Comment> getComment()throws Exception;
+
+	public Comment getCommentById(@Param(value = "id") int id)throws Exception;
 
 	public List<Comment>	getCommentListByMap(Map<String,Object> param)throws Exception;
 

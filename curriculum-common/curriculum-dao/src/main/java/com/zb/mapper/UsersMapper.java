@@ -8,7 +8,9 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface UsersMapper {
 
-	public Users getUsersById(@Param(value = "id") Long id)throws Exception;
+	public List<Users> getUsers()throws Exception;
+
+	public Users getUsersById(@Param(value = "id") int id)throws Exception;
 
 	public List<Users>	getUsersListByMap(Map<String,Object> param)throws Exception;
 

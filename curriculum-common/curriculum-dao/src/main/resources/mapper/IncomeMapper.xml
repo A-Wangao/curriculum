@@ -4,6 +4,20 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zb.mapper.IncomeMapper">
 
+    <select id="getIncome" resultType="com.zb.pojo.Income">
+        select
+                Id as Id,
+                userId as userId,
+                income as income,
+                shourutime as shourutime,
+                remarks as remarks,
+                inchannel as inchannel,
+                Intype as Intype,
+                status as status,
+                createTime as createTime
+        from income
+    </select>
+
     <select id="getIncomeById" resultType="com.zb.pojo.Income">
         select
                 Id as Id,
@@ -12,7 +26,9 @@
                 shourutime as shourutime,
                 remarks as remarks,
                 inchannel as inchannel,
-                Intype as Intype
+                Intype as Intype,
+                status as status,
+                createTime as createTime
         from income
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
@@ -29,7 +45,9 @@
                 shourutime as shourutime,
                 remarks as remarks,
                 inchannel as inchannel,
-                Intype as Intype
+                Intype as Intype,
+                status as status,
+                createTime as createTime
         from income
         <trim prefix="where" prefixOverrides="and | or">
                 <if test="Id != null and Id!=''">
@@ -52,6 +70,12 @@
                 </if>
                 <if test="Intype != null and Intype!=''">
                     and Intype=#{Intype}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
                 </if>
         </trim>
         <if test="beginPos != null and pageSize != null ">
@@ -83,6 +107,12 @@
                 <if test="Intype != null and Intype!=''">
                     and Intype=#{Intype}
                 </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
         </trim>
     </select>
 
@@ -94,7 +124,9 @@
                         shourutime,
                         remarks,
                         inchannel,
-                        Intype)
+                        Intype,
+                        status,
+                        createTime)
         values(
                      #{Id},
                      #{userId},
@@ -102,7 +134,9 @@
                      #{shourutime},
                      #{remarks},
                      #{inchannel},
-                    #{Intype})
+                     #{Intype},
+                     #{status},
+                    #{createTime})
     </insert>
 
     <update id="updateIncome" parameterType="com.zb.pojo.Income">
@@ -127,7 +161,13 @@
                             inchannel=#{inchannel},
                         </if>
                         <if test="Intype != null and Intype!=''">
-                            Intype=#{Intype}
+                            Intype=#{Intype},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status},
+                        </if>
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime}
                         </if>
         </trim>
     </update>

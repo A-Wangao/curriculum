@@ -1,8 +1,8 @@
 package com.zb.service;
 
-import com.zb.dto.Dto;
+import com.zb.pojo.Integral;
 
 public interface IntegralService {
 
-    public Dto getIntegralById(Long userId) throws Exception;
+    public Integral getIntegralById(int id) throws Exception;
 }

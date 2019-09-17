@@ -1,0 +1,16 @@
+server:
+  port: 8012
+spring:
+  application:
+    name: curriculum-good-provider
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/curriculum_user_integral
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:ok@192.168.199.109:7001/eureka/
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

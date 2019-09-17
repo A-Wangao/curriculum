@@ -8,7 +8,9 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface IncomeMapper {
 
-	public Income getIncomeById(@Param(value = "id") Long id)throws Exception;
+	public List<Income> getIncome()throws Exception;
+
+	public Income getIncomeById(@Param(value = "id") int id)throws Exception;
 
 	public List<Income>	getIncomeListByMap(Map<String,Object> param)throws Exception;
 

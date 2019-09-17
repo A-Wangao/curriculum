@@ -4,15 +4,31 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zb.mapper.ExpenditureMapper">
 
+    <select id="getExpenditure" resultType="com.zb.pojo.Expenditure">
+        select
+                id as id,
+                userId as userId,
+                expenditure as expenditure,
+                zhichuTime as zhichuTime,
+                remarks as remarks,
+                paychannel as paychannel,
+                method as method,
+                status as status,
+                createTime as createTime
+        from expenditure
+    </select>
+
     <select id="getExpenditureById" resultType="com.zb.pojo.Expenditure">
         select
                 id as id,
                 userId as userId,
                 expenditure as expenditure,
-                zhichutime as zhichutime,
+                zhichuTime as zhichuTime,
                 remarks as remarks,
                 paychannel as paychannel,
-                method as method
+                method as method,
+                status as status,
+                createTime as createTime
         from expenditure
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
@@ -26,10 +42,12 @@
                 id as id,
                 userId as userId,
                 expenditure as expenditure,
-                zhichutime as zhichutime,
+                zhichuTime as zhichuTime,
                 remarks as remarks,
                 paychannel as paychannel,
-                method as method
+                method as method,
+                status as status,
+                createTime as createTime
         from expenditure
         <trim prefix="where" prefixOverrides="and | or">
                 <if test="id != null and id!=''">
@@ -41,8 +59,8 @@
                 <if test="expenditure != null and expenditure!=''">
                     and expenditure=#{expenditure}
                 </if>
-                <if test="zhichutime != null and zhichutime!=''">
-                    and zhichutime=#{zhichutime}
+                <if test="zhichuTime != null and zhichuTime!=''">
+                    and zhichuTime=#{zhichuTime}
                 </if>
                 <if test="remarks != null and remarks!=''">
                     and remarks=#{remarks}
@@ -52,6 +70,12 @@
                 </if>
                 <if test="method != null and method!=''">
                     and method=#{method}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
                 </if>
         </trim>
         <if test="beginPos != null and pageSize != null ">
@@ -71,8 +95,8 @@
                 <if test="expenditure != null and expenditure!=''">
                     and expenditure=#{expenditure}
                 </if>
-                <if test="zhichutime != null and zhichutime!=''">
-                    and zhichutime=#{zhichutime}
+                <if test="zhichuTime != null and zhichuTime!=''">
+                    and zhichuTime=#{zhichuTime}
                 </if>
                 <if test="remarks != null and remarks!=''">
                     and remarks=#{remarks}
@@ -83,6 +107,12 @@
                 <if test="method != null and method!=''">
                     and method=#{method}
                 </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
         </trim>
     </select>
 
@@ -90,17 +120,21 @@
         insert into expenditure(
                         userId,
                         expenditure,
-                        zhichutime,
+                        zhichuTime,
                         remarks,
                         paychannel,
-                        method)
+                        method,
+                        status,
+                        createTime)
         values(
                      #{userId},
                      #{expenditure},
-                     #{zhichutime},
+                     #{zhichuTime},
                      #{remarks},
                      #{paychannel},
-                    #{method})
+                     #{method},
+                     #{status},
+                    #{createTime})
     </insert>
 
     <update id="updateExpenditure" parameterType="com.zb.pojo.Expenditure">
@@ -112,8 +146,8 @@
                         <if test="expenditure != null and expenditure!=''">
                             expenditure=#{expenditure},
                         </if>
-                        <if test="zhichutime != null and zhichutime!=''">
-                            zhichutime=#{zhichutime},
+                        <if test="zhichuTime != null and zhichuTime!=''">
+                            zhichuTime=#{zhichuTime},
                         </if>
                         <if test="remarks != null and remarks!=''">
                             remarks=#{remarks},
@@ -122,7 +156,13 @@
                             paychannel=#{paychannel},
                         </if>
                         <if test="method != null and method!=''">
-                            method=#{method}
+                            method=#{method},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status},
+                        </if>
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime}
                         </if>
         </trim>
     </update>

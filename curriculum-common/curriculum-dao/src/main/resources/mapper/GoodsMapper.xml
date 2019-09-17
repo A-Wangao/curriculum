@@ -4,13 +4,25 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zb.mapper.GoodsMapper">
 
+    <select id="getGoods" resultType="com.zb.pojo.Goods">
+        select
+                id as id,
+                orderId as orderId,
+                createTime as createTime,
+                curriculumId as curriculumId,
+                status as status,
+                couponId as couponId
+        from goods
+    </select>
+
     <select id="getGoodsById" resultType="com.zb.pojo.Goods">
         select
                 id as id,
                 orderId as orderId,
-                createtime as createtime,
+                createTime as createTime,
                 curriculumId as curriculumId,
-                status as status
+                status as status,
+                couponId as couponId
         from goods
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
@@ -23,9 +35,10 @@
         select
                 id as id,
                 orderId as orderId,
-                createtime as createtime,
+                createTime as createTime,
                 curriculumId as curriculumId,
-                status as status
+                status as status,
+                couponId as couponId
         from goods
         <trim prefix="where" prefixOverrides="and | or">
                 <if test="id != null and id!=''">
@@ -34,14 +47,17 @@
                 <if test="orderId != null and orderId!=''">
                     and orderId=#{orderId}
                 </if>
-                <if test="createtime != null and createtime!=''">
-                    and createtime=#{createtime}
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
                 </if>
                 <if test="curriculumId != null and curriculumId!=''">
                     and curriculumId=#{curriculumId}
                 </if>
                 <if test="status != null and status!=''">
                     and status=#{status}
+                </if>
+                <if test="couponId != null and couponId!=''">
+                    and couponId=#{couponId}
                 </if>
         </trim>
         <if test="beginPos != null and pageSize != null ">
@@ -58,8 +74,8 @@
                 <if test="orderId != null and orderId!=''">
                     and orderId=#{orderId}
                 </if>
-                <if test="createtime != null and createtime!=''">
-                    and createtime=#{createtime}
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
                 </if>
                 <if test="curriculumId != null and curriculumId!=''">
                     and curriculumId=#{curriculumId}
@@ -67,20 +83,25 @@
                 <if test="status != null and status!=''">
                     and status=#{status}
                 </if>
+                <if test="couponId != null and couponId!=''">
+                    and couponId=#{couponId}
+                </if>
         </trim>
     </select>
 
     <insert id="insertGoods" parameterType="com.zb.pojo.Goods">
         insert into goods(
                         orderId,
-                        createtime,
+                        createTime,
                         curriculumId,
-                        status)
+                        status,
+                        couponId)
         values(
                      #{orderId},
-                     #{createtime},
+                     #{createTime},
                      #{curriculumId},
-                    #{status})
+                     #{status},
+                    #{couponId})
     </insert>
 
     <update id="updateGoods" parameterType="com.zb.pojo.Goods">
@@ -89,14 +110,17 @@
                         <if test="orderId != null and orderId!=''">
                             orderId=#{orderId},
                         </if>
-                        <if test="createtime != null and createtime!=''">
-                            createtime=#{createtime},
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime},
                         </if>
                         <if test="curriculumId != null and curriculumId!=''">
                             curriculumId=#{curriculumId},
                         </if>
                         <if test="status != null and status!=''">
-                            status=#{status}
+                            status=#{status},
+                        </if>
+                        <if test="couponId != null and couponId!=''">
+                            couponId=#{couponId}
                         </if>
         </trim>
     </update>

@@ -8,7 +8,9 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface CouponMapper {
 
-	public Coupon getCouponById(@Param(value = "id") Long id)throws Exception;
+	public List<Coupon> getCoupon()throws Exception;
+
+	public Coupon getCouponById(@Param(value = "id") int id)throws Exception;
 
 	public List<Coupon>	getCouponListByMap(Map<String,Object> param)throws Exception;
 

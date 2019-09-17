@@ -4,18 +4,33 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zb.mapper.IntegralMapper">
 
-    <select id="getIntegralByUserId" resultType="com.zb.pojo.Integral">
+    <select id="getIntegral" resultType="com.zb.pojo.Integral">
         select
                 id as id,
                 userId as userId,
                 userintegral as userintegral,
                 access as access,
                 getdate as getdate,
-                usedate as usedate
+                usedate as usedate,
+                status as status,
+                createTime as createTime
+        from integral
+    </select>
+
+    <select id="getIntegralById" resultType="com.zb.pojo.Integral">
+        select
+                id as id,
+                userId as userId,
+                userintegral as userintegral,
+                access as access,
+                getdate as getdate,
+                usedate as usedate,
+                status as status,
+                createTime as createTime
         from integral
         <trim prefix="where" prefixOverrides="and | or">
-            <if test="UserId != null">
-                and UserId=#{UserId}
+            <if test="id != null">
+                and id=#{id}
             </if>
         </trim>
     </select>
@@ -27,7 +42,9 @@
                 userintegral as userintegral,
                 access as access,
                 getdate as getdate,
-                usedate as usedate
+                usedate as usedate,
+                status as status,
+                createTime as createTime
         from integral
         <trim prefix="where" prefixOverrides="and | or">
                 <if test="id != null and id!=''">
@@ -47,6 +64,12 @@
                 </if>
                 <if test="usedate != null and usedate!=''">
                     and usedate=#{usedate}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
                 </if>
         </trim>
         <if test="beginPos != null and pageSize != null ">
@@ -75,6 +98,12 @@
                 <if test="usedate != null and usedate!=''">
                     and usedate=#{usedate}
                 </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
         </trim>
     </select>
 
@@ -84,13 +113,17 @@
                         userintegral,
                         access,
                         getdate,
-                        usedate)
+                        usedate,
+                        status,
+                        createTime)
         values(
                      #{userId},
                      #{userintegral},
                      #{access},
                      #{getdate},
-                    #{usedate})
+                     #{usedate},
+                     #{status},
+                    #{createTime})
     </insert>
 
     <update id="updateIntegral" parameterType="com.zb.pojo.Integral">
@@ -109,7 +142,13 @@
                             getdate=#{getdate},
                         </if>
                         <if test="usedate != null and usedate!=''">
-                            usedate=#{usedate}
+                            usedate=#{usedate},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status},
+                        </if>
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime}
                         </if>
         </trim>
     </update>

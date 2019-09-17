@@ -10,7 +10,12 @@ import java.util.Map;
 public class IntegralClientFallBack implements RestIntegralClient {
 
     @Override
-    public Integral getIntegralByUserId(Long userId) throws Exception {
+    public List<Integral> getIntegral()throws Exception{
+    return null;
+    }
+
+    @Override
+    public Integral getIntegralById(int id)throws Exception{
         return null;
     }
 

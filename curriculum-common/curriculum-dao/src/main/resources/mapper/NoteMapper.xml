@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.NoteMapper">
+
+    <select id="getNote" resultType="com.zb.pojo.Note">
+        select
+                id as id,
+                userId as userId,
+                mainId as mainId,
+                secondId as secondId,
+                noteContent as noteContent,
+                status as status,
+                createTime as createTime
+        from note
+    </select>
+
+    <select id="getNoteById" resultType="com.zb.pojo.Note">
+        select
+                id as id,
+                userId as userId,
+                mainId as mainId,
+                secondId as secondId,
+                noteContent as noteContent,
+                status as status,
+                createTime as createTime
+        from note
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getNoteListByMap" resultType="com.zb.pojo.Note" parameterType="java.util.Map">
+        select
+                id as id,
+                userId as userId,
+                mainId as mainId,
+                secondId as secondId,
+                noteContent as noteContent,
+                status as status,
+                createTime as createTime
+        from note
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="mainId != null and mainId!=''">
+                    and mainId=#{mainId}
+                </if>
+                <if test="secondId != null and secondId!=''">
+                    and secondId=#{secondId}
+                </if>
+                <if test="noteContent != null and noteContent!=''">
+                    and noteContent=#{noteContent}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getNoteCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from note
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="mainId != null and mainId!=''">
+                    and mainId=#{mainId}
+                </if>
+                <if test="secondId != null and secondId!=''">
+                    and secondId=#{secondId}
+                </if>
+                <if test="noteContent != null and noteContent!=''">
+                    and noteContent=#{noteContent}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertNote" parameterType="com.zb.pojo.Note">
+        insert into note(
+                        userId,
+                        mainId,
+                        secondId,
+                        noteContent,
+                        status,
+                        createTime)
+        values(
+                     #{userId},
+                     #{mainId},
+                     #{secondId},
+                     #{noteContent},
+                     #{status},
+                    #{createTime})
+    </insert>
+
+    <update id="updateNote" parameterType="com.zb.pojo.Note">
+        update note
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="userId != null and userId!=''">
+                            userId=#{userId},
+                        </if>
+                        <if test="mainId != null and mainId!=''">
+                            mainId=#{mainId},
+                        </if>
+                        <if test="secondId != null and secondId!=''">
+                            secondId=#{secondId},
+                        </if>
+                        <if test="noteContent != null and noteContent!=''">
+                            noteContent=#{noteContent},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status},
+                        </if>
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

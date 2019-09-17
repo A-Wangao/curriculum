@@ -6,7 +6,7 @@ import java.util.Date;
 */
 public class Integralmall implements Serializable {
     //
-    private Long id;
+    private Integer id;
     //
     private String name;
     //
@@ -17,11 +17,15 @@ public class Integralmall implements Serializable {
     private Date term;
     //
     private String images;
+    //数据状态
+    private Integer status;
+    //添加时间
+    private Date createTime;
     //get set 方法
-    public void setId (Long  id){
+    public void setId (Integer  id){
         this.id=id;
     }
-    public  Long getId(){
+    public  Integer getId(){
         return this.id;
     }
     public void setName (String  name){
@@ -53,5 +57,17 @@ public class Integralmall implements Serializable {
     }
     public  String getImages(){
         return this.images;
+    }
+    public void setStatus (Integer  status){
+        this.status=status;
+    }
+    public  Integer getStatus(){
+        return this.status;
+    }
+    public void setCreateTime (Date  createTime){
+        this.createTime=createTime;
+    }
+    public  Date getCreateTime(){
+        return this.createTime;
     }
 }

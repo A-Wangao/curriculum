@@ -4,14 +4,27 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zb.mapper.ReplyMapper">
 
+    <select id="getReply" resultType="com.zb.pojo.Reply">
+        select
+                id as id,
+                commentId as commentId,
+                fromuserId as fromuserId,
+                touserId as touserId,
+                replyMsg as replyMsg,
+                createTime as createTime,
+                status as status
+        from reply
+    </select>
+
     <select id="getReplyById" resultType="com.zb.pojo.Reply">
         select
                 id as id,
                 commentId as commentId,
-                fromuserid as fromuserid,
-                touserid as touserid,
-                replymsg as replymsg,
-                createtime as createtime
+                fromuserId as fromuserId,
+                touserId as touserId,
+                replyMsg as replyMsg,
+                createTime as createTime,
+                status as status
         from reply
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
@@ -24,10 +37,11 @@
         select
                 id as id,
                 commentId as commentId,
-                fromuserid as fromuserid,
-                touserid as touserid,
-                replymsg as replymsg,
-                createtime as createtime
+                fromuserId as fromuserId,
+                touserId as touserId,
+                replyMsg as replyMsg,
+                createTime as createTime,
+                status as status
         from reply
         <trim prefix="where" prefixOverrides="and | or">
                 <if test="id != null and id!=''">
@@ -36,17 +50,20 @@
                 <if test="commentId != null and commentId!=''">
                     and commentId=#{commentId}
                 </if>
-                <if test="fromuserid != null and fromuserid!=''">
-                    and fromuserid=#{fromuserid}
+                <if test="fromuserId != null and fromuserId!=''">
+                    and fromuserId=#{fromuserId}
                 </if>
-                <if test="touserid != null and touserid!=''">
-                    and touserid=#{touserid}
+                <if test="touserId != null and touserId!=''">
+                    and touserId=#{touserId}
                 </if>
-                <if test="replymsg != null and replymsg!=''">
-                    and replymsg=#{replymsg}
+                <if test="replyMsg != null and replyMsg!=''">
+                    and replyMsg=#{replyMsg}
                 </if>
-                <if test="createtime != null and createtime!=''">
-                    and createtime=#{createtime}
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
                 </if>
         </trim>
         <if test="beginPos != null and pageSize != null ">
@@ -63,17 +80,20 @@
                 <if test="commentId != null and commentId!=''">
                     and commentId=#{commentId}
                 </if>
-                <if test="fromuserid != null and fromuserid!=''">
-                    and fromuserid=#{fromuserid}
+                <if test="fromuserId != null and fromuserId!=''">
+                    and fromuserId=#{fromuserId}
                 </if>
-                <if test="touserid != null and touserid!=''">
-                    and touserid=#{touserid}
+                <if test="touserId != null and touserId!=''">
+                    and touserId=#{touserId}
                 </if>
-                <if test="replymsg != null and replymsg!=''">
-                    and replymsg=#{replymsg}
+                <if test="replyMsg != null and replyMsg!=''">
+                    and replyMsg=#{replyMsg}
                 </if>
-                <if test="createtime != null and createtime!=''">
-                    and createtime=#{createtime}
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
                 </if>
         </trim>
     </select>
@@ -81,16 +101,18 @@
     <insert id="insertReply" parameterType="com.zb.pojo.Reply">
         insert into reply(
                         commentId,
-                        fromuserid,
-                        touserid,
-                        replymsg,
-                        createtime)
+                        fromuserId,
+                        touserId,
+                        replyMsg,
+                        createTime,
+                        status)
         values(
                      #{commentId},
-                     #{fromuserid},
-                     #{touserid},
-                     #{replymsg},
-                    #{createtime})
+                     #{fromuserId},
+                     #{touserId},
+                     #{replyMsg},
+                     #{createTime},
+                    #{status})
     </insert>
 
     <update id="updateReply" parameterType="com.zb.pojo.Reply">
@@ -99,17 +121,20 @@
                         <if test="commentId != null and commentId!=''">
                             commentId=#{commentId},
                         </if>
-                        <if test="fromuserid != null and fromuserid!=''">
-                            fromuserid=#{fromuserid},
+                        <if test="fromuserId != null and fromuserId!=''">
+                            fromuserId=#{fromuserId},
                         </if>
-                        <if test="touserid != null and touserid!=''">
-                            touserid=#{touserid},
+                        <if test="touserId != null and touserId!=''">
+                            touserId=#{touserId},
                         </if>
-                        <if test="replymsg != null and replymsg!=''">
-                            replymsg=#{replymsg},
+                        <if test="replyMsg != null and replyMsg!=''">
+                            replyMsg=#{replyMsg},
                         </if>
-                        <if test="createtime != null and createtime!=''">
-                            createtime=#{createtime}
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status}
                         </if>
         </trim>
     </update>

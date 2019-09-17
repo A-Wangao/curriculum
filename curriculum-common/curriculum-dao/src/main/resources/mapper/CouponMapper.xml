@@ -4,13 +4,25 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zb.mapper.CouponMapper">
 
+    <select id="getCoupon" resultType="com.zb.pojo.Coupon">
+        select
+                id as id,
+                userId as userId,
+                money as money,
+                maturitytime as maturitytime,
+                state as state,
+                createTime as createTime
+        from coupon
+    </select>
+
     <select id="getCouponById" resultType="com.zb.pojo.Coupon">
         select
                 id as id,
                 userId as userId,
                 money as money,
                 maturitytime as maturitytime,
-                state as state
+                state as state,
+                createTime as createTime
         from coupon
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
@@ -25,7 +37,8 @@
                 userId as userId,
                 money as money,
                 maturitytime as maturitytime,
-                state as state
+                state as state,
+                createTime as createTime
         from coupon
         <trim prefix="where" prefixOverrides="and | or">
                 <if test="id != null and id!=''">
@@ -42,6 +55,9 @@
                 </if>
                 <if test="state != null and state!=''">
                     and state=#{state}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
                 </if>
         </trim>
         <if test="beginPos != null and pageSize != null ">
@@ -67,6 +83,9 @@
                 <if test="state != null and state!=''">
                     and state=#{state}
                 </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
         </trim>
     </select>
 
@@ -75,12 +94,14 @@
                         userId,
                         money,
                         maturitytime,
-                        state)
+                        state,
+                        createTime)
         values(
                      #{userId},
                      #{money},
                      #{maturitytime},
-                    #{state})
+                     #{state},
+                    #{createTime})
     </insert>
 
     <update id="updateCoupon" parameterType="com.zb.pojo.Coupon">
@@ -96,7 +117,10 @@
                             maturitytime=#{maturitytime},
                         </if>
                         <if test="state != null and state!=''">
-                            state=#{state}
+                            state=#{state},
+                        </if>
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime}
                         </if>
         </trim>
     </update>

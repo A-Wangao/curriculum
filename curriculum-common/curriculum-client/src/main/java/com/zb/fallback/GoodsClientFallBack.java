@@ -9,9 +9,13 @@ import java.util.Map;
 @Component
 public class GoodsClientFallBack implements RestGoodsClient {
 
+    @Override
+    public List<Goods> getGoods()throws Exception{
+    return null;
+    }
 
     @Override
-    public Goods getGoodsById(Long id)throws Exception{
+    public Goods getGoodsById(int id)throws Exception{
         return null;
     }
 

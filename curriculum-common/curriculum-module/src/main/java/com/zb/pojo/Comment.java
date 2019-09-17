@@ -6,52 +6,68 @@ import java.util.Date;
 */
 public class Comment implements Serializable {
     //主键
-    private Long id;
+    private Integer id;
     //笔记人
-    private Long issueId;
+    private Integer issueId;
     //回复人
-    private Long userId;
+    private Integer userId;
     //评论内容
-    private String replymsg;
+    private String replyMsg;
     //创建时间
-    private Date createtime;
+    private Date createTime;
     //赞数
     private Integer zannumber;
+    //次课程id
+    private Integer secondId;
+    //数据状态
+    private Integer state;
     //get set 方法
-    public void setId (Long  id){
+    public void setId (Integer  id){
         this.id=id;
     }
-    public  Long getId(){
+    public  Integer getId(){
         return this.id;
     }
-    public void setIssueId (Long  issueId){
+    public void setIssueId (Integer  issueId){
         this.issueId=issueId;
     }
-    public  Long getIssueId(){
+    public  Integer getIssueId(){
         return this.issueId;
     }
-    public void setUserId (Long  userId){
+    public void setUserId (Integer  userId){
         this.userId=userId;
     }
-    public  Long getUserId(){
+    public  Integer getUserId(){
         return this.userId;
     }
-    public void setReplymsg (String  replymsg){
-        this.replymsg=replymsg;
+    public void setReplyMsg (String  replyMsg){
+        this.replyMsg=replyMsg;
     }
-    public  String getReplymsg(){
-        return this.replymsg;
+    public  String getReplyMsg(){
+        return this.replyMsg;
     }
-    public void setCreatetime (Date  createtime){
-        this.createtime=createtime;
+    public void setCreateTime (Date  createTime){
+        this.createTime=createTime;
     }
-    public  Date getCreatetime(){
-        return this.createtime;
+    public  Date getCreateTime(){
+        return this.createTime;
     }
     public void setZannumber (Integer  zannumber){
         this.zannumber=zannumber;
     }
     public  Integer getZannumber(){
         return this.zannumber;
+    }
+    public void setSecondId (Integer  secondId){
+        this.secondId=secondId;
+    }
+    public  Integer getSecondId(){
+        return this.secondId;
+    }
+    public void setState (Integer  state){
+        this.state=state;
+    }
+    public  Integer getState(){
+        return this.state;
     }
 }

@@ -8,7 +8,9 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface ExpenditureMapper {
 
-	public Expenditure getExpenditureById(@Param(value = "id") Long id)throws Exception;
+	public List<Expenditure> getExpenditure()throws Exception;
+
+	public Expenditure getExpenditureById(@Param(value = "id") int id)throws Exception;
 
 	public List<Expenditure>	getExpenditureListByMap(Map<String,Object> param)throws Exception;
 

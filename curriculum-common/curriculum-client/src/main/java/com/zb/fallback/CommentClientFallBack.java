@@ -9,9 +9,13 @@ import java.util.Map;
 @Component
 public class CommentClientFallBack implements RestCommentClient {
 
+    @Override
+    public List<Comment> getComment()throws Exception{
+    return null;
+    }
 
     @Override
-    public Comment getCommentById(Long id)throws Exception{
+    public Comment getCommentById(int id)throws Exception{
         return null;
     }
 

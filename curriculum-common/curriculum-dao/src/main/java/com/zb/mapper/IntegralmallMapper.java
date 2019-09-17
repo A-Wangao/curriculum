@@ -8,9 +8,9 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface IntegralmallMapper {
 
-	public List<Integralmall> getIntegralmallList() throws Exception;
+	public List<Integralmall> getIntegralmall()throws Exception;
 
-	public Integralmall getIntegralmallById(@Param(value = "Id") Long userId)throws Exception;
+	public Integralmall getIntegralmallById(@Param(value = "id") int id)throws Exception;
 
 	public List<Integralmall>	getIntegralmallListByMap(Map<String,Object> param)throws Exception;
 

@@ -2,7 +2,6 @@ package com.zb.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.zb.client.RestIntegralmallClient;
-import com.zb.dto.DtoUtil;
 import com.zb.pojo.Integralmall;
 import com.zb.service.IntegralmallService;
 import com.zb.util.RedisUtils;
@@ -38,7 +37,8 @@ public class IntegralmallServiceImpl implements IntegralmallService {
     }
 
     @Override
-    public Integralmall getIntegralmallByUserId(Long userId) throws Exception {
-        return null;
+    public int addIntegralmall(Integralmall integralmall) throws Exception {
+        return restIntegralmallClient.qdtxAddIntegralmall(integralmall);
     }
+
 }

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.MaincurriculumMapper">
+
+    <select id="getMaincurriculum" resultType="com.zb.pojo.Maincurriculum">
+        select
+                id as id,
+                courseName as courseName,
+                courseTypes as courseTypes,
+                hierarchicalType as hierarchicalType,
+                introduction as introduction,
+                chapters as chapters,
+                duration as duration,
+                stuNumber as stuNumber,
+                courseNotes as courseNotes,
+                whattoLearn as whattoLearn,
+                money as money,
+                image as image,
+                teacherId as teacherId,
+                createTime as createTime
+        from maincurriculum
+    </select>
+
+    <select id="getMaincurriculumById" resultType="com.zb.pojo.Maincurriculum">
+        select
+                id as id,
+                courseName as courseName,
+                courseTypes as courseTypes,
+                hierarchicalType as hierarchicalType,
+                introduction as introduction,
+                chapters as chapters,
+                duration as duration,
+                stuNumber as stuNumber,
+                courseNotes as courseNotes,
+                whattoLearn as whattoLearn,
+                money as money,
+                image as image,
+                teacherId as teacherId,
+                createTime as createTime
+        from maincurriculum
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getMaincurriculumListByMap" resultType="com.zb.pojo.Maincurriculum" parameterType="java.util.Map">
+        select
+                id as id,
+                courseName as courseName,
+                courseTypes as courseTypes,
+                hierarchicalType as hierarchicalType,
+                introduction as introduction,
+                chapters as chapters,
+                duration as duration,
+                stuNumber as stuNumber,
+                courseNotes as courseNotes,
+                whattoLearn as whattoLearn,
+                money as money,
+                image as image,
+                teacherId as teacherId,
+                createTime as createTime
+        from maincurriculum
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="courseName != null and courseName!=''">
+                    and courseName=#{courseName}
+                </if>
+                <if test="courseTypes != null and courseTypes!=''">
+                    and courseTypes=#{courseTypes}
+                </if>
+                <if test="hierarchicalType != null and hierarchicalType!=''">
+                    and hierarchicalType=#{hierarchicalType}
+                </if>
+                <if test="introduction != null and introduction!=''">
+                    and introduction=#{introduction}
+                </if>
+                <if test="chapters != null and chapters!=''">
+                    and chapters=#{chapters}
+                </if>
+                <if test="duration != null and duration!=''">
+                    and duration=#{duration}
+                </if>
+                <if test="stuNumber != null and stuNumber!=''">
+                    and stuNumber=#{stuNumber}
+                </if>
+                <if test="courseNotes != null and courseNotes!=''">
+                    and courseNotes=#{courseNotes}
+                </if>
+                <if test="whattoLearn != null and whattoLearn!=''">
+                    and whattoLearn=#{whattoLearn}
+                </if>
+                <if test="money != null and money!=''">
+                    and money=#{money}
+                </if>
+                <if test="image != null and image!=''">
+                    and image=#{image}
+                </if>
+                <if test="teacherId != null and teacherId!=''">
+                    and teacherId=#{teacherId}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getMaincurriculumCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from maincurriculum
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="courseName != null and courseName!=''">
+                    and courseName=#{courseName}
+                </if>
+                <if test="courseTypes != null and courseTypes!=''">
+                    and courseTypes=#{courseTypes}
+                </if>
+                <if test="hierarchicalType != null and hierarchicalType!=''">
+                    and hierarchicalType=#{hierarchicalType}
+                </if>
+                <if test="introduction != null and introduction!=''">
+                    and introduction=#{introduction}
+                </if>
+                <if test="chapters != null and chapters!=''">
+                    and chapters=#{chapters}
+                </if>
+                <if test="duration != null and duration!=''">
+                    and duration=#{duration}
+                </if>
+                <if test="stuNumber != null and stuNumber!=''">
+                    and stuNumber=#{stuNumber}
+                </if>
+                <if test="courseNotes != null and courseNotes!=''">
+                    and courseNotes=#{courseNotes}
+                </if>
+                <if test="whattoLearn != null and whattoLearn!=''">
+                    and whattoLearn=#{whattoLearn}
+                </if>
+                <if test="money != null and money!=''">
+                    and money=#{money}
+                </if>
+                <if test="image != null and image!=''">
+                    and image=#{image}
+                </if>
+                <if test="teacherId != null and teacherId!=''">
+                    and teacherId=#{teacherId}
+                </if>
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertMaincurriculum" parameterType="com.zb.pojo.Maincurriculum">
+        insert into maincurriculum(
+                        courseName,
+                        courseTypes,
+                        hierarchicalType,
+                        introduction,
+                        chapters,
+                        duration,
+                        stuNumber,
+                        courseNotes,
+                        whattoLearn,
+                        money,
+                        image,
+                        teacherId,
+                        createTime)
+        values(
+                     #{courseName},
+                     #{courseTypes},
+                     #{hierarchicalType},
+                     #{introduction},
+                     #{chapters},
+                     #{duration},
+                     #{stuNumber},
+                     #{courseNotes},
+                     #{whattoLearn},
+                     #{money},
+                     #{image},
+                     #{teacherId},
+                    #{createTime})
+    </insert>
+
+    <update id="updateMaincurriculum" parameterType="com.zb.pojo.Maincurriculum">
+        update maincurriculum
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="courseName != null and courseName!=''">
+                            courseName=#{courseName},
+                        </if>
+                        <if test="courseTypes != null and courseTypes!=''">
+                            courseTypes=#{courseTypes},
+                        </if>
+                        <if test="hierarchicalType != null and hierarchicalType!=''">
+                            hierarchicalType=#{hierarchicalType},
+                        </if>
+                        <if test="introduction != null and introduction!=''">
+                            introduction=#{introduction},
+                        </if>
+                        <if test="chapters != null and chapters!=''">
+                            chapters=#{chapters},
+                        </if>
+                        <if test="duration != null and duration!=''">
+                            duration=#{duration},
+                        </if>
+                        <if test="stuNumber != null and stuNumber!=''">
+                            stuNumber=#{stuNumber},
+                        </if>
+                        <if test="courseNotes != null and courseNotes!=''">
+                            courseNotes=#{courseNotes},
+                        </if>
+                        <if test="whattoLearn != null and whattoLearn!=''">
+                            whattoLearn=#{whattoLearn},
+                        </if>
+                        <if test="money != null and money!=''">
+                            money=#{money},
+                        </if>
+                        <if test="image != null and image!=''">
+                            image=#{image},
+                        </if>
+                        <if test="teacherId != null and teacherId!=''">
+                            teacherId=#{teacherId},
+                        </if>
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

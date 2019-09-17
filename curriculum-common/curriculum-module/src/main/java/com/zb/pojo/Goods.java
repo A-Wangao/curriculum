@@ -6,44 +6,52 @@ import java.util.Date;
 */
 public class Goods implements Serializable {
     //主键
-    private Long id;
+    private Integer id;
     //订单编号
-    private Long orderId;
+    private Integer orderId;
     //订单时间
-    private Date createtime;
+    private Date createTime;
     //课程
-    private Long curriculumId;
-    //订单状态（1:未支付2：已支付3：已过期）
-    private Long status;
+    private Integer curriculumId;
+    //订单状态
+    private Integer status;
+    //优惠券
+    private Integer couponId;
     //get set 方法
-    public void setId (Long  id){
+    public void setId (Integer  id){
         this.id=id;
     }
-    public  Long getId(){
+    public  Integer getId(){
         return this.id;
     }
-    public void setOrderId (Long  orderId){
+    public void setOrderId (Integer  orderId){
         this.orderId=orderId;
     }
-    public  Long getOrderId(){
+    public  Integer getOrderId(){
         return this.orderId;
     }
-    public void setCreatetime (Date  createtime){
-        this.createtime=createtime;
+    public void setCreateTime (Date  createTime){
+        this.createTime=createTime;
     }
-    public  Date getCreatetime(){
-        return this.createtime;
+    public  Date getCreateTime(){
+        return this.createTime;
     }
-    public void setCurriculumId (Long  curriculumId){
+    public void setCurriculumId (Integer  curriculumId){
         this.curriculumId=curriculumId;
     }
-    public  Long getCurriculumId(){
+    public  Integer getCurriculumId(){
         return this.curriculumId;
     }
-    public void setStatus (Long  status){
+    public void setStatus (Integer  status){
         this.status=status;
     }
-    public  Long getStatus(){
+    public  Integer getStatus(){
         return this.status;
+    }
+    public void setCouponId (Integer  couponId){
+        this.couponId=couponId;
+    }
+    public  Integer getCouponId(){
+        return this.couponId;
     }
 }

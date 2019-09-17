@@ -4,14 +4,29 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zb.mapper.CommentMapper">
 
+    <select id="getComment" resultType="com.zb.pojo.Comment">
+        select
+                id as id,
+                issueId as issueId,
+                userId as userId,
+                replyMsg as replyMsg,
+                createTime as createTime,
+                zannumber as zannumber,
+                secondId as secondId,
+                state as state
+        from comment
+    </select>
+
     <select id="getCommentById" resultType="com.zb.pojo.Comment">
         select
                 id as id,
                 issueId as issueId,
                 userId as userId,
-                replymsg as replymsg,
-                createtime as createtime,
-                zannumber as zannumber
+                replyMsg as replyMsg,
+                createTime as createTime,
+                zannumber as zannumber,
+                secondId as secondId,
+                state as state
         from comment
         <trim prefix="where" prefixOverrides="and | or">
             <if test="id != null">
@@ -25,9 +40,11 @@
                 id as id,
                 issueId as issueId,
                 userId as userId,
-                replymsg as replymsg,
-                createtime as createtime,
-                zannumber as zannumber
+                replyMsg as replyMsg,
+                createTime as createTime,
+                zannumber as zannumber,
+                secondId as secondId,
+                state as state
         from comment
         <trim prefix="where" prefixOverrides="and | or">
                 <if test="id != null and id!=''">
@@ -39,14 +56,20 @@
                 <if test="userId != null and userId!=''">
                     and userId=#{userId}
                 </if>
-                <if test="replymsg != null and replymsg!=''">
-                    and replymsg=#{replymsg}
+                <if test="replyMsg != null and replyMsg!=''">
+                    and replyMsg=#{replyMsg}
                 </if>
-                <if test="createtime != null and createtime!=''">
-                    and createtime=#{createtime}
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
                 </if>
                 <if test="zannumber != null and zannumber!=''">
                     and zannumber=#{zannumber}
+                </if>
+                <if test="secondId != null and secondId!=''">
+                    and secondId=#{secondId}
+                </if>
+                <if test="state != null and state!=''">
+                    and state=#{state}
                 </if>
         </trim>
         <if test="beginPos != null and pageSize != null ">
@@ -66,14 +89,20 @@
                 <if test="userId != null and userId!=''">
                     and userId=#{userId}
                 </if>
-                <if test="replymsg != null and replymsg!=''">
-                    and replymsg=#{replymsg}
+                <if test="replyMsg != null and replyMsg!=''">
+                    and replyMsg=#{replyMsg}
                 </if>
-                <if test="createtime != null and createtime!=''">
-                    and createtime=#{createtime}
+                <if test="createTime != null and createTime!=''">
+                    and createTime=#{createTime}
                 </if>
                 <if test="zannumber != null and zannumber!=''">
                     and zannumber=#{zannumber}
+                </if>
+                <if test="secondId != null and secondId!=''">
+                    and secondId=#{secondId}
+                </if>
+                <if test="state != null and state!=''">
+                    and state=#{state}
                 </if>
         </trim>
     </select>
@@ -82,15 +111,19 @@
         insert into comment(
                         issueId,
                         userId,
-                        replymsg,
-                        createtime,
-                        zannumber)
+                        replyMsg,
+                        createTime,
+                        zannumber,
+                        secondId,
+                        state)
         values(
                      #{issueId},
                      #{userId},
-                     #{replymsg},
-                     #{createtime},
-                    #{zannumber})
+                     #{replyMsg},
+                     #{createTime},
+                     #{zannumber},
+                     #{secondId},
+                    #{state})
     </insert>
 
     <update id="updateComment" parameterType="com.zb.pojo.Comment">
@@ -102,14 +135,20 @@
                         <if test="userId != null and userId!=''">
                             userId=#{userId},
                         </if>
-                        <if test="replymsg != null and replymsg!=''">
-                            replymsg=#{replymsg},
+                        <if test="replyMsg != null and replyMsg!=''">
+                            replyMsg=#{replyMsg},
                         </if>
-                        <if test="createtime != null and createtime!=''">
-                            createtime=#{createtime},
+                        <if test="createTime != null and createTime!=''">
+                            createTime=#{createTime},
                         </if>
                         <if test="zannumber != null and zannumber!=''">
-                            zannumber=#{zannumber}
+                            zannumber=#{zannumber},
+                        </if>
+                        <if test="secondId != null and secondId!=''">
+                            secondId=#{secondId},
+                        </if>
+                        <if test="state != null and state!=''">
+                            state=#{state}
                         </if>
         </trim>
     </update>

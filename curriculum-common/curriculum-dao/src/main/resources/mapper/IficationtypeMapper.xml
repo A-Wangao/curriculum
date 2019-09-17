@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zb.mapper.IficationtypeMapper">
+
+    <select id="getIficationtype" resultType="com.zb.pojo.Ificationtype">
+        select
+                id as id,
+                typeName as typeName,
+                directionId as directionId
+        from ificationtype
+    </select>
+
+    <select id="getIficationtypeById" resultType="com.zb.pojo.Ificationtype">
+        select
+                id as id,
+                typeName as typeName,
+                directionId as directionId
+        from ificationtype
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getIficationtypeListByMap" resultType="com.zb.pojo.Ificationtype" parameterType="java.util.Map">
+        select
+                id as id,
+                typeName as typeName,
+                directionId as directionId
+        from ificationtype
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="typeName != null and typeName!=''">
+                    and typeName=#{typeName}
+                </if>
+                <if test="directionId != null and directionId!=''">
+                    and directionId=#{directionId}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getIficationtypeCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from ificationtype
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="typeName != null and typeName!=''">
+                    and typeName=#{typeName}
+                </if>
+                <if test="directionId != null and directionId!=''">
+                    and directionId=#{directionId}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertIficationtype" parameterType="com.zb.pojo.Ificationtype">
+        insert into ificationtype(
+                        typeName,
+                        directionId)
+        values(
+                     #{typeName},
+                    #{directionId})
+    </insert>
+
+    <update id="updateIficationtype" parameterType="com.zb.pojo.Ificationtype">
+        update ificationtype
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="typeName != null and typeName!=''">
+                            typeName=#{typeName},
+                        </if>
+                        <if test="directionId != null and directionId!=''">
+                            directionId=#{directionId}
+                        </if>
+        </trim>
+    </update>
+</mapper>

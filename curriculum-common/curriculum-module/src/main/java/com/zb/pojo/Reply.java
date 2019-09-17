@@ -6,52 +6,60 @@ import java.util.Date;
 */
 public class Reply implements Serializable {
     //主键
-    private Long id;
+    private Integer id;
     //评论Id
-    private Long commentId;
+    private Integer commentId;
     //回复人
-    private Long fromuserid;
+    private Integer fromuserId;
     //回复对象
-    private Long touserid;
+    private Integer touserId;
     //回复内容
-    private String replymsg;
+    private String replyMsg;
     //创建时间
-    private Date createtime;
+    private Date createTime;
+    //数据状态
+    private Integer status;
     //get set 方法
-    public void setId (Long  id){
+    public void setId (Integer  id){
         this.id=id;
     }
-    public  Long getId(){
+    public  Integer getId(){
         return this.id;
     }
-    public void setCommentId (Long  commentId){
+    public void setCommentId (Integer  commentId){
         this.commentId=commentId;
     }
-    public  Long getCommentId(){
+    public  Integer getCommentId(){
         return this.commentId;
     }
-    public void setFromuserid (Long  fromuserid){
-        this.fromuserid=fromuserid;
+    public void setFromuserId (Integer  fromuserId){
+        this.fromuserId=fromuserId;
     }
-    public  Long getFromuserid(){
-        return this.fromuserid;
+    public  Integer getFromuserId(){
+        return this.fromuserId;
     }
-    public void setTouserid (Long  touserid){
-        this.touserid=touserid;
+    public void setTouserId (Integer  touserId){
+        this.touserId=touserId;
     }
-    public  Long getTouserid(){
-        return this.touserid;
+    public  Integer getTouserId(){
+        return this.touserId;
     }
-    public void setReplymsg (String  replymsg){
-        this.replymsg=replymsg;
+    public void setReplyMsg (String  replyMsg){
+        this.replyMsg=replyMsg;
     }
-    public  String getReplymsg(){
-        return this.replymsg;
+    public  String getReplyMsg(){
+        return this.replyMsg;
     }
-    public void setCreatetime (Date  createtime){
-        this.createtime=createtime;
+    public void setCreateTime (Date  createTime){
+        this.createTime=createTime;
     }
-    public  Date getCreatetime(){
-        return this.createtime;
+    public  Date getCreateTime(){
+        return this.createTime;
+    }
+    public void setStatus (Integer  status){
+        this.status=status;
+    }
+    public  Integer getStatus(){
+        return this.status;
     }
 }

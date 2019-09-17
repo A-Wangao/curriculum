@@ -31,7 +31,7 @@ public class RestIntegralmallService {
     }
 
     @RequestMapping(value = "/getIntegralmallById", method = RequestMethod.POST)
-    public Integralmall getIntegralmallByUserId(@RequestParam("Id") Long Id) throws Exception {
+    public Integralmall getIntegralmallById(@RequestParam("Id") int Id) throws Exception {
         return integralmallMapper.getIntegralmallById(Id);
     }
 
